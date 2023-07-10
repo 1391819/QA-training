@@ -1,2 +1,2 @@
 # QA-training
-Example paragraph.
+day-6: Git
