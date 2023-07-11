@@ -1,7 +1,7 @@
-# Markdown page ⭐
+# Raccoon project ⭐
 
 ## Table of Contents
-- [Markdown page ⭐](#markdown-page-)
+- [Raccoon project ⭐](#raccoon-project-)
   - [Table of Contents](#table-of-contents)
   - [Introduction 🍎](#introduction-)
   - [Features 🍫](#features-)
@@ -17,7 +17,7 @@
 
 ## Introduction 🍎
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque aliquet malesuada nisl elementum semper. Aenean massa diam, consequat non interdum sed, fringilla vitae neque. Pellentesque posuere enim eu nibh feugiat auctor. Duis porttitor, ligula congue faucibus condimentum, quam dui dignissim ipsum, et vestibulum velit lacus in risus. Ut vitae sem imperdiet arcu placerat pharetra sed quis neque. Nullam vel posuere justo. Aliquam non enim nec orci ullamcorper convallis. Duis tincidunt odio eleifend lectus gravida, eu aliquam velit ultricies. Nunc condimentum enim vitae tortor lacinia luctus. Proin non sodales nulla. Maecenas vulputate eros nec est luctus, nec tincidunt nulla pretium. Cras ut eros sem. Duis vehicula dui ut auctor vulputate.
+There should be an introduction here but I'm not good at writing something like that.
 
 ## Features 🍫
 
