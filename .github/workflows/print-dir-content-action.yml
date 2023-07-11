@@ -1,5 +1,5 @@
-name: Manually print day-7 content
-run-name: Manually print day-7 content
+name: Print day-7 content
+run-name: Print day-7 content
 on:
   workflow_dispatch:
 jobs:
