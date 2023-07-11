@@ -7,5 +7,5 @@ jobs:
     name: List day-7 repo content
     runs-on: ubuntu-latest
     steps:
-      - run: cd ./day-7/
-      - run: ls-la
+      - name: Print repo content
+      - run: ls -la
