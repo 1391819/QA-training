@@ -1,5 +1,5 @@
 name: Actions Demo
-run-name: ${{ github.actor }} is testing a scheduled action
+run-name: ${{ github.actor }} is testing a manual action
 on:
   workflow_dispatch:
 jobs:
