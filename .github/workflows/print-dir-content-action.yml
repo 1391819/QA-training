@@ -8,4 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print repo content
+        working-directory: ./day-7
         run: ls -la
