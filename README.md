@@ -1,3 +1,2 @@
 # QA-training
-day-6: Git
-day-7: GitHub Actions ..
+- [ ] Need to add proper day-topics here 
