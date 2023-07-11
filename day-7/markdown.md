@@ -45,7 +45,7 @@ Here it's a divider
 
 <!-- ---  -->
 
-[Link](www.google.com)
+[DuckDuckGo](https://duckduckgo.com/)
 
 <!-- ---  -->
 
