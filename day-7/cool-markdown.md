@@ -1,25 +1,25 @@
-# Markdown page
+# Markdown page ⭐
 
 ## Table of Contents
-- [Markdown page](#markdown-page)
+- [Markdown page ⭐](#markdown-page-)
   - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Features](#features)
-  - [Structure](#structure)
-  - [Usage](#usage)
+  - [Introduction 🍎](#introduction-)
+  - [Features 🍫](#features-)
+  - [Structure 📁](#structure-)
+  - [Usage 🤔](#usage-)
     - [Instructions](#instructions)
     - [Useful links](#useful-links)
     - [Images](#images)
-  - [Examples](#examples)
+  - [Examples 💻](#examples-)
     - [Code example](#code-example)
     - [More examples](#more-examples)
-  - [Conclusion](#conclusion)
+  - [Conclusion 🐒](#conclusion-)
 
-## Introduction
+## Introduction 🍎
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque aliquet malesuada nisl elementum semper. Aenean massa diam, consequat non interdum sed, fringilla vitae neque. Pellentesque posuere enim eu nibh feugiat auctor. Duis porttitor, ligula congue faucibus condimentum, quam dui dignissim ipsum, et vestibulum velit lacus in risus. Ut vitae sem imperdiet arcu placerat pharetra sed quis neque. Nullam vel posuere justo. Aliquam non enim nec orci ullamcorper convallis. Duis tincidunt odio eleifend lectus gravida, eu aliquam velit ultricies. Nunc condimentum enim vitae tortor lacinia luctus. Proin non sodales nulla. Maecenas vulputate eros nec est luctus, nec tincidunt nulla pretium. Cras ut eros sem. Duis vehicula dui ut auctor vulputate.
 
-## Features
+## Features 🍫
 
 - [x] Feature 1
   - [x] Feature 1.1
@@ -29,7 +29,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque aliquet malesua
 - [ ] Feature 3
 - [ ] Feature 4
 
-## Structure
+## Structure 📁
 
 ```
 $ROOT
@@ -43,7 +43,7 @@ $ROOT
 └── folder_4
 ```
 
-## Usage
+## Usage 🤔
 
 ### Instructions
 
@@ -70,7 +70,7 @@ $ROOT
 
 ![Raccoon](https://i.pinimg.com/originals/94/21/77/94217732f63477efd54eaa48cc7a6bfc.gif)
 
-## Examples
+## Examples 💻
 
 ### Code example
 
@@ -86,6 +86,6 @@ say_hello("Raccoon")
 
 Forgot to add them
 
-## Conclusion
+## Conclusion 🐒
 
 There is supposed to be a conclusion here
