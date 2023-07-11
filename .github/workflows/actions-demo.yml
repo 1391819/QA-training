@@ -1,4 +1,4 @@
-name: Scheduled GitHub Actions Demo
+name: Actions Demo
 run-name: ${{ github.actor }} is testing a scheduled action
 on:
   workflow_dispatch:
