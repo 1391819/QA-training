@@ -1,0 +1,58 @@
+# You can have yaml files inside yaml files
+# You use ---
+# Lists maps and atom 
+--- # -> Start of a new yaml file
+# List of animals in cartoons
+- cat
+- dog
+- mouse
+- snake
+- monkey
+- bear
+... # -> This is the end of a yaml file
+    # -> 3 dots quite redundant since if another ---
+    #    is found, a new yaml file starts
+# Maps key value data
+name: roberto 
+weight: XX
+height: XX
+eyes: 2
+legs: also 2
+is-alive: true 
+
+# Hierarchy of list and maps
+names:
+  - leon
+  - Alfie
+  - Thomas
+  - James
+  - James
+  - Farhana
+pets:
+  - moose
+  - cow
+  - oxen 
+  - elephant 
+  - amoeba
+
+# List of maps
+- name: roberto
+  height: XX
+  weight: XX
+- name: Fred
+  height: YY
+  weight: YY
+- name: Janet
+  height: ZZ
+  weight: ZZ
+
+# Extra
+# Depending on what we are dealing with 
+# it's quite useful to put " " around strings
+
+# We use a | to specify multi-line
+- poem: | 
+  Line 1
+  Line 2
+  Line 3 
+  Line 4
