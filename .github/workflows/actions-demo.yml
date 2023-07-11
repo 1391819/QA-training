@@ -1,10 +1,9 @@
 name: Scheduled GitHub Actions Demo
 run-name: ${{ github.actor }} is testing a scheduled action
 on:
-  schedule:
-  - cron: "0/5 * * * *"
+  workflow_dispatch:
 jobs:
   Explore-GitHub-actions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello, this is working"
+      - run: echo "Hello, this is working and is manual"
