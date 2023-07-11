@@ -1,5 +1,5 @@
-name: Print day-7 content
-run-name: Print day-7 content
+name: Run script using actions
+run-name: Run script using actions
 on:
   workflow_dispatch:
 jobs:
