@@ -1,0 +1,11 @@
+name: Manually print day-7 content
+run-name: Manually print day-7 content
+on:
+  workflow_dispatch:
+jobs:
+  my_job:
+    name: List day-7 repo content
+    runs-on: ubuntu-latest
+    steps:
+      - run: cd ./day-7/
+      - run: ls-la
