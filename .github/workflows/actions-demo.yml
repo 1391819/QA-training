@@ -1,9 +1,0 @@
-name: Actions Demo
-run-name: ${{ github.actor }} is testing a manual action
-on:
-  workflow_dispatch:
-jobs:
-  Explore-GitHub-actions:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Hello, this is working and is manual"
