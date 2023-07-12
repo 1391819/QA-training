@@ -1,15 +1,16 @@
-name: Scheduled print of day-7
-run-name: Scheduled print of day-7 content
+name: Scheduled action demo
+# run-name: Scheduled print of day-7 content
 on:
   schedule:
-  - cron: "0/5 * * * *"
+  - cron: "0/5 * * * *" # scheduled every 5 minutes
 jobs:
   my_job:
-    name: List day-7 repo content
+    name: List repo content
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
       - name: Print repo content
-        working-directory: day-7/
-        run: ls -la
+        # a specific working dir can be specified
+        #working-directory: day-7/
+        run: ls -l
