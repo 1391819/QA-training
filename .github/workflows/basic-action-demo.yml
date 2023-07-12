@@ -1,4 +1,4 @@
-#name: Actions Demo
+name: Basic action demo
 #run-name: ${{ github.actor }} is testing a manual action
 on:
   workflow_dispatch:
