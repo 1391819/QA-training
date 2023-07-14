@@ -80,8 +80,8 @@ CREATE TABLE products (
 ```sql
 CREATE TABLE orders (
   order_ID INT PRIMARY KEY,
-  customer_ID INT,
-  product_ID INT,
+  FK_customer_ID INT,
+  FK_product_ID INT,
   quantity INT DEFAULT 1,
   transaction_amount FLOAT NOT NULL,
   transaction_date DATE NOT NULL,
