@@ -54,16 +54,18 @@ CREATE TABLE customers (
 | stock | INT | DEFAULT = 0 |
 
 ```sql
-CREATE TABLE orders (
-  order_ID INT PRIMARY KEY,
-  customer_ID INT,
-  product_ID INT,
-  quantity INT DEFAULT 1,
-  amount FLOAT NOT NULL,
-  sale DATE NOT NULL,
-  FOREIGN KEY (customer_ID) REFERENCES customers(customer_ID),
-  FOREIGN KEY (product_ID) REFERENCES products(product_ID)
+CREATE TABLE products (
+  product_ID INT PRIMARY KEY,
+  name VARCHAR(50) NOT NULL,
+  genre_id INT,
+  rating INT DEFAULT 0,
+  price FLOAT NOT NULL,
+  supplier_ID INT,
+  stock INT DEFAULT 0,
+  FOREIGN KEY (genre_id) REFERENCES genres(genre_id),
+  FOREIGN KEY (supplier_ID) REFERENCES suppliers(supplier_ID)
 );
+
 ```
 
 ### Orders
