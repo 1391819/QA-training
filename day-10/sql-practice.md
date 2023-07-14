@@ -92,3 +92,5 @@ SELECT title FROM movies ORDER BY release_date DESC LIMIT 10;
     ON t1.movie_id = t3.id 
     WHERE t1.movie_id = 1;
     ```
+
+    This can be further expanded and joined to other tables (e.g., ratings)
