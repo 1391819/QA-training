@@ -31,6 +31,16 @@
 | phone_number | VARCHAR(50) |
 | hash | binary(20) | NOT NULL |
 | salt | binary(20) | NOT NULL |
+
+```sql
+CREATE TABLE customers (
+  customer_ID INT PRIMARY KEY,
+  email VARCHAR(50) NOT NULL,
+  phone_number VARCHAR(50),
+  hash BINARY(20) NOT NULL,
+  salt BINARY(20) NOT NULL
+);
+```
     
 ### Products
 | Field | Type | Constraints |
@@ -42,7 +52,20 @@
 | price | FLOAT | NOT NULL |
 | supplier_ID | INT | FOREIGN KEY |
 | stock | INT | DEFAULT = 0 |
-    
+
+```sql
+CREATE TABLE orders (
+  order_ID INT PRIMARY KEY,
+  customer_ID INT,
+  product_ID INT,
+  quantity INT DEFAULT 1,
+  amount FLOAT NOT NULL,
+  sale DATE NOT NULL,
+  FOREIGN KEY (customer_ID) REFERENCES customers(customer_ID),
+  FOREIGN KEY (product_ID) REFERENCES products(product_ID)
+);
+```
+
 ### Orders
 | Field | Type | Constraints |
 | ----- | ---- | ----------- |
@@ -53,6 +76,19 @@
 | amount | FLOAT | NOT NULL |
 | sale | DATE | NOT NULL |
 
+```sql
+CREATE TABLE orders (
+  order_ID INT PRIMARY KEY,
+  customer_ID INT,
+  product_ID INT,
+  quantity INT DEFAULT 1,
+  amount FLOAT NOT NULL,
+  sale DATE NOT NULL,
+  FOREIGN KEY (customer_ID) REFERENCES customers(customer_ID),
+  FOREIGN KEY (product_ID) REFERENCES products(product_ID)
+);
+```
+
 ### Suppliers
 | Field | Type | Constraints |
 | ----- | ---- | ----------- |
@@ -60,8 +96,23 @@
 | supplier_name | VARCHAR(50) | NOT NULL |
 | location | VARCHAR(50) | NOT NULL |
 
+```sql
+CREATE TABLE suppliers (
+  supplier_ID INT PRIMARY KEY,
+  supplier_name VARCHAR(50) NOT NULL,
+  location VARCHAR(50) NOT NULL
+);
+```
+
 ### Genres
 | Field | Type | Constraints |
 | ----- | ---- | ----------- |
 | genre_id | INT | PRIMARY KEY |
 | genre_name | VARCHAR(50) | NOT NULL |
+
+```sql
+CREATE TABLE genres (
+  genre_id INT PRIMARY KEY,
+  genre_name VARCHAR(50) NOT NULL
+);
+```
