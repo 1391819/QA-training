@@ -29,7 +29,7 @@
 | customer_ID | INT | PRIMARY KEY |
 | email | VARCHAR(50) | NOT NULL |
 | phone_number | VARCHAR(50) |
-| hash | binary(20) | NOT NULL |
+| pwd | binary(20) | NOT NULL |
 | salt | binary(20) | NOT NULL |
 
 ```sql
@@ -37,7 +37,7 @@ CREATE TABLE customers (
   customer_ID INT PRIMARY KEY,
   email VARCHAR(50) NOT NULL,
   phone_number VARCHAR(50),
-  hash BINARY(20) NOT NULL,
+  pwd BINARY(20) NOT NULL,
   salt BINARY(20) NOT NULL
 );
 ```
@@ -46,37 +46,36 @@ CREATE TABLE customers (
 | Field | Type | Constraints |
 | ----- | ---- | ----------- |
 | product_ID | INT | PRIMARY KEY |
-| name | VARCHAR(50) | NOT NULL |
-| genre_ID | INT | FOREIGN KEY |
+| product_name | VARCHAR(50) | NOT NULL |
+| FK_genre_ID | INT | FOREIGN KEY |
 | rating | INT | DEFAULT = 0 |
 | price | FLOAT | NOT NULL |
-| supplier_ID | INT | FOREIGN KEY |
-| stock | INT | DEFAULT = 0 |
+| FK_supplier_ID | INT | FOREIGN KEY |
+| inventory | INT | DEFAULT = 0 |
 
 ```sql
 CREATE TABLE products (
   product_ID INT PRIMARY KEY,
-  name VARCHAR(50) NOT NULL,
-  genre_id INT,
+  product_name VARCHAR(50) NOT NULL,
+  FK_genre_id INT,
   rating INT DEFAULT 0,
   price FLOAT NOT NULL,
-  supplier_ID INT,
-  stock INT DEFAULT 0,
-  FOREIGN KEY (genre_id) REFERENCES genres(genre_id),
-  FOREIGN KEY (supplier_ID) REFERENCES suppliers(supplier_ID)
+  FK_supplier_ID INT,
+  inventory INT DEFAULT 0,
+  FOREIGN KEY (FK_genre_id) REFERENCES genres(genre_id),
+  FOREIGN KEY (FK_supplier_ID) REFERENCES suppliers(supplier_ID)
 );
-
 ```
 
 ### Orders
 | Field | Type | Constraints |
 | ----- | ---- | ----------- |
 | order_ID | INT | PRIMARY KEY |
-| customer_ID | INT | FOREIGN KEY |
-| product_ID | INT | FOREIGN KEY |
+| FK_customer_ID | INT | FOREIGN KEY |
+| FK_product_ID | INT | FOREIGN KEY |
 | quantity | INT | DEFAULT = 1  |
-| amount | FLOAT | NOT NULL |
-| sale | DATE | NOT NULL |
+| transaction_amount | FLOAT | NOT NULL |
+| transaction_date | DATE | NOT NULL |
 
 ```sql
 CREATE TABLE orders (
@@ -84,10 +83,10 @@ CREATE TABLE orders (
   customer_ID INT,
   product_ID INT,
   quantity INT DEFAULT 1,
-  amount FLOAT NOT NULL,
-  sale DATE NOT NULL,
-  FOREIGN KEY (customer_ID) REFERENCES customers(customer_ID),
-  FOREIGN KEY (product_ID) REFERENCES products(product_ID)
+  transaction_amount FLOAT NOT NULL,
+  transaction_date DATE NOT NULL,
+  FOREIGN KEY (FK_customer_ID) REFERENCES customers(customer_ID),
+  FOREIGN KEY (FK_product_ID) REFERENCES products(product_ID)
 );
 ```
 
@@ -96,13 +95,13 @@ CREATE TABLE orders (
 | ----- | ---- | ----------- |
 | supplier_ID | INT | PRIMARY KEY | 
 | supplier_name | VARCHAR(50) | NOT NULL |
-| location | VARCHAR(50) | NOT NULL |
+| supplier_location | VARCHAR(50) | NOT NULL |
 
 ```sql
 CREATE TABLE suppliers (
   supplier_ID INT PRIMARY KEY,
   supplier_name VARCHAR(50) NOT NULL,
-  location VARCHAR(50) NOT NULL
+  supplier_location VARCHAR(50) NOT NULL
 );
 ```
 
