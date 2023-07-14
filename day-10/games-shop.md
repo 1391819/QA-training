@@ -37,7 +37,7 @@
 | ----- | ---- | ----------- |
 | product_ID | INT | PRIMARY KEY |
 | name | VARCHAR(50) | NOT NULL |
-| genre_id | INT | FOREIGN KEY |
+| genre_ID | INT | FOREIGN KEY |
 | rating | INT | DEFAULT = 0 |
 | price | FLOAT | NOT NULL |
 | supplier_ID | INT | FOREIGN KEY |
