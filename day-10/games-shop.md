@@ -29,8 +29,8 @@
 | customer_ID | INT | PRIMARY KEY |
 | email | VARCHAR(50) | NOT NULL |
 | phone_number | VARCHAR(50) |
-| hash | binary | NOT NULL |
-| salt | binary | NOT NULL |
+| hash | binary(20) | NOT NULL |
+| salt | binary(20) | NOT NULL |
     
 ### Products
 | Field | Type | Constraints |
