@@ -26,7 +26,7 @@
 ### Customers
 | Field | Type | Constraints |
 | ----- | ---- | ----------- |
-| customer_ID | INT | PRIMARY KEY |
+| customer_ID | INT | PRIMARY KEY AUTO_INCREMENT |
 | email | VARCHAR(50) | NOT NULL |
 | phone_number | VARCHAR(50) |
 | pwd | binary(20) | NOT NULL |
@@ -34,7 +34,7 @@
 
 ```sql
 CREATE TABLE customers (
-  customer_ID INT PRIMARY KEY,
+  customer_ID INT PRIMARY KEY AUTO_INCREMENT,
   email VARCHAR(50) NOT NULL,
   phone_number VARCHAR(50),
   pwd BINARY(20) NOT NULL,
@@ -45,7 +45,7 @@ CREATE TABLE customers (
 ### Products
 | Field | Type | Constraints |
 | ----- | ---- | ----------- |
-| product_ID | INT | PRIMARY KEY |
+| product_ID | INT | PRIMARY KEY AUTO_INCREMENT |
 | product_name | VARCHAR(50) | NOT NULL |
 | FK_genre_ID | INT | FOREIGN KEY |
 | rating | INT | DEFAULT = 0 |
@@ -55,7 +55,7 @@ CREATE TABLE customers (
 
 ```sql
 CREATE TABLE products (
-  product_ID INT PRIMARY KEY,
+  product_ID INT PRIMARY KEY AUTO_INCREMENT,
   product_name VARCHAR(50) NOT NULL,
   FK_genre_id INT,
   rating INT DEFAULT 0,
@@ -70,7 +70,7 @@ CREATE TABLE products (
 ### Orders
 | Field | Type | Constraints |
 | ----- | ---- | ----------- |
-| order_ID | INT | PRIMARY KEY |
+| order_ID | INT | PRIMARY KEY AUTO_INCREMENT |
 | FK_customer_ID | INT | FOREIGN KEY |
 | FK_product_ID | INT | FOREIGN KEY |
 | quantity | INT | DEFAULT = 1  |
@@ -79,7 +79,7 @@ CREATE TABLE products (
 
 ```sql
 CREATE TABLE orders (
-  order_ID INT PRIMARY KEY,
+  order_ID INT PRIMARY KEY AUTO_INCREMENT,
   FK_customer_ID INT,
   FK_product_ID INT,
   quantity INT DEFAULT 1,
@@ -93,13 +93,13 @@ CREATE TABLE orders (
 ### Suppliers
 | Field | Type | Constraints |
 | ----- | ---- | ----------- |
-| supplier_ID | INT | PRIMARY KEY | 
+| supplier_ID | INT | PRIMARY KEY AUTO_INCREMENT | 
 | supplier_name | VARCHAR(50) | NOT NULL |
 | supplier_location | VARCHAR(50) | NOT NULL |
 
 ```sql
 CREATE TABLE suppliers (
-  supplier_ID INT PRIMARY KEY,
+  supplier_ID INT PRIMARY KEY AUTO_INCREMENT ,
   supplier_name VARCHAR(50) NOT NULL,
   supplier_location VARCHAR(50) NOT NULL
 );
@@ -108,12 +108,12 @@ CREATE TABLE suppliers (
 ### Genres
 | Field | Type | Constraints |
 | ----- | ---- | ----------- |
-| genre_id | INT | PRIMARY KEY |
+| genre_id | INT | PRIMARY KEY AUTO_INCREMENT | 
 | genre_name | VARCHAR(50) | NOT NULL |
 
 ```sql
 CREATE TABLE genres (
-  genre_id INT PRIMARY KEY,
+  genre_id INT PRIMARY KEY AUTO_INCREMENT ,
   genre_name VARCHAR(50) NOT NULL
 );
 ```
