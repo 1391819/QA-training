@@ -57,12 +57,12 @@ CREATE TABLE customers (
 CREATE TABLE products (
   product_ID INT PRIMARY KEY AUTO_INCREMENT,
   product_name VARCHAR(50) NOT NULL,
-  FK_genre_id INT NOT NULL,
+  FK_genre_ID INT NOT NULL,
   rating INT DEFAULT 0,
   price FLOAT NOT NULL,
   FK_supplier_ID INT NOT NULL,
   inventory INT DEFAULT 0,
-  FOREIGN KEY (FK_genre_id) REFERENCES genres(genre_id),
+  FOREIGN KEY (FK_genre_ID) REFERENCES genres(genre_id),
   FOREIGN KEY (FK_supplier_ID) REFERENCES suppliers(supplier_ID)
 );
 ```
