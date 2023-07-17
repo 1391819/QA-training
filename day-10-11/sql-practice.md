@@ -94,3 +94,52 @@ SELECT title FROM movies ORDER BY release_date DESC LIMIT 10;
     ```
 
     This can be further expanded and joined to other tables (e.g., ratings)
+
+## Bit more practice?
+
+```sql
+-- use world.sql 
+USE world;
+
+-- Counting number of countries in Asia
+SELECT Count(Name) 
+FROM country 
+WHERE Continent="Asia";
+
+
+-- Returning country with the highest GNP 
+SELECT Name, MAX(GNP) AS MAX_GNP 
+FROM country 
+GROUP BY Name 
+ORDER BY MAX_GNP DESC 
+LIMIT 1;
+```
+
+```sql
+-- Returning Continent and average GNP for each one
+-- Group the data by continent, calculate average GNP for each group
+-- and order the results in descending order based on the average GNP
+SELECT Continent, AVG(GNP) AS Avg_GNP
+FROM country 
+GROUP BY Continent
+ORDER BY Avg_GNP DESC;
+```
+
+```sql
+DESC city;
+-- Returning city with the highest population
+SELECT Name, MAX(Population) as highest_population
+FROM city 
+GROUP BY Name
+ORDER BY highest_population DESC
+LIMIT 1;
+```
+
+```sql
+-- Returning top 10 countries with the highest population (sum of all cities)
+SELECT countryCode, SUM(Population) as total_population
+FROM city 
+GROUP BY countryCode
+ORDER BY total_population DESC
+LIMIT 10;
+```
