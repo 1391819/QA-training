@@ -73,8 +73,8 @@ You will need to use the movielens database to solve these problems.
    WHERE ratings.rating = 5
    LIMIT 10;
    
-   -- Now my head is just spinning, we need to add movies, genres_movies, and genres?
-   SELECT movies.id AS movie_id, movies.title, genres.name AS genre, ratings.rating, valid_users.age, 
+   -- Now my head is just spinning, we need to add movies, genres_movies, and genres? + adding distinct for unique records
+   SELECT DISTINCT movies.id AS movie_id, movies.title, genres.name AS genre, ratings.rating, valid_users.age, 
    valid_users.gender, valid_users.occupation_name
    FROM (
     SELECT users.id, users.age, users.gender, occupations.name AS occupation_name
