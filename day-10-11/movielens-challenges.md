@@ -92,6 +92,22 @@ You will need to use the movielens database to solve these problems.
    LEFT JOIN genres
    ON genres_movies.genre_id = genres.id
    WHERE ratings.rating = 5 AND genres.name = "Sci-Fi";
+
+   -- Leon solution    
+    SELECT DISTINCT movies.title
+    FROM movies
+    LEFT JOIN genres_movies ON movies.id = genres_movies.movie_id
+    LEFT JOIN genres ON genres.id = genres_movies.genre_id
+    LEFT JOIN ratings ON movies.id = ratings.movie_id
+    LEFT JOIN users ON users.id = ratings.user_id
+    LEFT JOIN occupations ON users.occupation_id = occupations.id 
+    WHERE users.gender = 'M' 
+    AND users.age = 24 
+    AND occupations.name = 'Student'
+    AND ratings.rating = 5
+    AND genres.name = 'Sci-Fi'
+    ORDER BY movies.title;
+
    ```
 
 4. List the unique titles of each of the movies released on the most popular release day.
