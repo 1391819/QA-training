@@ -47,10 +47,10 @@ CREATE TABLE customers (
 | ----- | ---- | ----------- |
 | product_ID | INT | PRIMARY KEY AUTO_INCREMENT |
 | product_name | VARCHAR(50) | NOT NULL |
-| FK_genre_ID | INT | FOREIGN KEY |
+| FK_genre_ID | INT | FOREIGN KEY NOT NULL |
 | rating | INT | DEFAULT = 0 |
 | price | FLOAT | NOT NULL |
-| FK_supplier_ID | INT | FOREIGN KEY |
+| FK_supplier_ID | INT | FOREIGN KEY NOT NULL |
 | inventory | INT | DEFAULT = 0 |
 
 ```sql
@@ -71,8 +71,8 @@ CREATE TABLE products (
 | Field | Type | Constraints |
 | ----- | ---- | ----------- |
 | order_ID | INT | PRIMARY KEY AUTO_INCREMENT |
-| FK_customer_ID | INT | FOREIGN KEY |
-| FK_product_ID | INT | FOREIGN KEY |
+| FK_customer_ID | INT | FOREIGN KEY NOT NULL |
+| FK_product_ID | INT | FOREIGN KEY NOT NULL |
 | quantity | INT | DEFAULT = 1  |
 | transaction_amount | FLOAT | NOT NULL |
 | transaction_date | DATE | NOT NULL |
