@@ -21,7 +21,7 @@ if mark >= 65:
     # if mark is less than 85, pass
     if mark <= 85:
         print("Pass")
-    # here it an be only more than 85
+    # here it can be only more than 85
     else:
         print("Distinction")
 # Anything else print "Fail"
