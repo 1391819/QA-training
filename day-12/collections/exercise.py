@@ -23,9 +23,9 @@ author = input("Enter author name: ")
 # get needed books and sort
 books = sorted(get_books(author))
 
-to_return = ", ".join(books)
-
+# checking if there are any books by the specified author
 if books:
+    to_return = ", ".join(books)
     print("Here are the books: " + to_return)
 else:
     print("No books by the specified author")
