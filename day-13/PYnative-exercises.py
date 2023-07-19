@@ -18,6 +18,8 @@ def remove_chars(s, n):
 # calculate the cube of all numbers from 1 to the given number
 def calculate_cubes(n):
     # will store cubes etc in here for now
+    # key is number
+    # value is cube
     tmp_dict = {}
 
     # we include the given number
@@ -35,7 +37,9 @@ if __name__ == "__main__":
     isPalindrome = is_palidrome(n)
     print(f"Is number palindrome: {isPalindrome}")
     """
+
     # ------------------------------------------------------
+
     """
     # Remove first N chars from a string
     n = 3
@@ -44,13 +48,20 @@ if __name__ == "__main__":
     print(f"Original string: {s}")
     print(f"Modified string: {new_s}")
     """
+
     # ------------------------------------------------------
+
+    """
     # Calculate the cube of all numbers from 1 to a given number
     n = 6
     cubes = calculate_cubes(n)
 
+    # Go through returned dictionary
     for key, value in cubes.items():
+        # Print key value pairs - number cube pairs
         print(f"Cube of {key} is {value}")
+
+    """
 
     # ------------------------------------------------------
 
