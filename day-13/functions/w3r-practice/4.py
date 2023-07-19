@@ -1,8 +1,8 @@
 # https://www.w3resource.com/python-exercises/python-functions-exercises.php
 
 
-def reverse_string(string):
-    return string[::-1]
+def reverse_string(my_string):
+    return my_string[::-1]
 
 
 initial_string = "abcdefg"

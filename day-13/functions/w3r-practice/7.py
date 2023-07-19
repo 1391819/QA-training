@@ -1,14 +1,14 @@
 # https://www.w3resource.com/python-exercises/python-functions-exercises.php
 
 
-def count_upper_and_lower(string):
+def count_upper_and_lower(my_string):
     upper_case_count = 0
     lowercase_count = 0
 
-    for char in string:
-        if char.isupper():
+    for c in my_string:
+        if c.isupper():
             upper_case_count += 1
-        elif char.islower():
+        elif c.islower():
             lowercase_count += 1
         else:
             pass

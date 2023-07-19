@@ -1,11 +1,11 @@
 # https://www.w3resource.com/python-exercises/python-functions-exercises.php
 
 
-def find_max(list):
+def find_max(my_list):
     # max is going to be first item
-    max = list[0]
+    max = my_list[0]
     # then we need to compare it to the others
-    for number in list:
+    for number in my_list:
         # if curr number is bigger
         if number > max:
             # assign max to curr number

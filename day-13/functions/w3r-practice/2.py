@@ -1,8 +1,8 @@
 # https://www.w3resource.com/python-exercises/python-functions-exercises.php
 
 
-def sum_numbers(list):
-    return sum(list)
+def sum_numbers(my_list):
+    return sum(my_list)
 
 
 numbers_list = [1, 2, 3, 4, 5]

@@ -1,19 +1,19 @@
 # https://www.w3resource.com/python-exercises/python-functions-exercises.php
 
 
-def check_if_prime(number):
+def check_if_prime(n):
     # 1 is not prime
-    if number == 1:
+    if n == 1:
         return False
     # 2 is always prime
-    elif number == 2:
+    elif n == 2:
         return True
     else:
         # we need to check all its divisors
-        for i in range(2, number):
+        for i in range(2, n):
             # if it has any divisors
             # it's not prime
-            if number % i == 0:
+            if n % i == 0:
                 return False
 
         # else, the number's only divisors
@@ -21,10 +21,10 @@ def check_if_prime(number):
         return True
 
 
-number = int(input("Enter number: "))
-is_prime = check_if_prime(number)
+n = int(input("Enter number: "))
+is_prime = check_if_prime(n)
 
 if is_prime:
-    print(f"Number {number} is prime")
+    print(f"Number {n} is prime")
 else:
-    print(f"Number {number} is not prime")
+    print(f"Number {n} is not prime")
