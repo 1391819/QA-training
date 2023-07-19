@@ -9,6 +9,6 @@
   - Iterations
   - W3R Practice
 - day-13: More Python
-  - Functions
+  - Functions + W3R Practice
   - Modules
   - Debugging
