@@ -10,4 +10,4 @@ def product(n):
     return total
 
 
-print(product([4, 4]))
+print(product([4, 4, 5]))
