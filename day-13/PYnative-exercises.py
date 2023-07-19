@@ -61,6 +61,49 @@ def recursive_function(n):
         return 0
 
 
+# create a new string made of the first, middle
+# and last characters of each input string
+def generate_string(s1, s2):
+    # get lengths of strings - for the middle chars
+    s1_len = len(s1)
+    s2_len = len(s2)
+
+    # get first chars
+    first_chars = s1[0] + s2[0]
+    # get middle chars
+    middle_chars = (
+        s1[int(s1_len / 2) : int(s1_len / 2) + 1]
+        + s2[int(s2_len / 2) : int(s2_len / 2) + 1]
+    )
+    # get last chars
+    last_chars = s1[-1] + s2[-1]
+
+    return first_chars + middle_chars + last_chars
+
+
+# arrange string chars such that lowercase letters
+# come first
+def arrange_string(s):
+    # can also be done without using lists
+    tmp_lower = []
+    tmp_upper = []
+    other_stuff = []
+
+    # going through each char
+    for char in s:
+        if char.islower():
+            tmp_lower.append(char)
+        elif char.isupper():
+            tmp_upper.append(char)
+        else:
+            other_stuff.append(char)
+
+    # join lists
+    final_string = "".join(tmp_lower + tmp_upper + other_stuff)
+
+    return final_string
+
+
 if __name__ == "__main__":
     """
     # Check palindrome number
@@ -114,16 +157,39 @@ if __name__ == "__main__":
 
     # ------------------------------------------------------
 
+    """
     # Recursive function
     #
     # Calculate the sum of numbers from 0 to n
     n = 10
     sum = recursive_function(n)
     print(f"Sum using recursive function is: {sum}")
+    """
 
     # ------------------------------------------------------
 
+    """
+    # Strings
+    #
+    # Create a new string made of the first, middle, and
+    # last characters of each input string
+    s1 = "Roberto"
+    s2 = "Nacu"
+    final_s = generate_string(s1, s2)
+    print(f"Original strings were {s1} and {s2}")
+    print(f"Final string is: {final_s}")
+    """
+
     # ------------------------------------------------------
+
+    # Strings
+    #
+    # Arrange string characters such that lowercase letters
+    # should come first
+    s = "JKAHqwpidhqwdpkjd@#@[!bAAPSI23123HDUPA"
+    arranged_s = arrange_string(s)
+    print(f"Original string was: {s}")
+    print(f"Arranged string is {arranged_s}")
 
     # ------------------------------------------------------
 
