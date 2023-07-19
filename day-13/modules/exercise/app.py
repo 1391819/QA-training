@@ -1,13 +1,17 @@
+# imports
 import mymodule
 
-
+# main
 if __name__ == "__main__":
+    # getting random ints
     dice1 = mymodule.random_n_in_range(1, 6)
     dice2 = mymodule.random_n_in_range(1, 6)
 
+    # printing returned values
     print(f"Dice 1 rolled {dice1}")
     print(f"Dice 2 rolled {dice2}")
 
+    # bit extra, who won?
     if dice1 > dice2:
         print(f"Dice 1 won!")
     elif dice1 < dice2:
