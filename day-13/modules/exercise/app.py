@@ -1,11 +1,11 @@
 # imports
-import mymodule
+import dice
 
 # main
 if __name__ == "__main__":
-    # getting random ints
-    dice1 = mymodule.random_n_in_range(1, 6)
-    dice2 = mymodule.random_n_in_range(1, 6)
+    # throw
+    dice1 = dice.throw()
+    dice2 = dice.throw()
 
     # printing returned values
     print(f"Dice 1 rolled {dice1}")
