@@ -1,3 +1,10 @@
+"""
+
+Goal: “Create class and sub-class objects which represent different geometrical shapes, such as Rectangles and Squares”
+objects should have methods to display area and perimeter
+
+"""
+
 from Square import Square
 from Rectangle import Rectangle
 
