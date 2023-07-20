@@ -1,7 +1,7 @@
 from Hat import Hat
 
 if __name__ == "__main__":
-    # add different colored balls
+    # add different balls
     hat = Hat(
         {
             "Red": 20,
@@ -16,4 +16,5 @@ if __name__ == "__main__":
 
     # pick a random number of balls
     drawn_balls = hat.pick_balls()
+    # print picked balls
     print(f"Drawn balls: {drawn_balls}")

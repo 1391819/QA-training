@@ -1,10 +1,14 @@
+# imports
 import random
 
 
+# Hat
 class Hat:
-    # variable number of args
+    # variable number of args?
+    # research
     def __init__(self, balls):
         self.all_balls = []
+        # for all balls (dict), save them
         for colour, amount in balls.items():
             # self.all_balls.append([colour] * amount)
             self.all_balls.extend([colour] * amount)
