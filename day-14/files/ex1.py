@@ -20,7 +20,7 @@ with open("teams.txt", mode="x") as file:
 # open the file and read 1st and 4th line
 with open("teams.txt", mode="r") as file:
     lines = file.readlines()
-    first_team = lines[0].strip()
-    fourth_team = lines[3].strip()
+    first_team = lines[0].strip()  # removes the \n
+    fourth_team = lines[3].strip()  # removes the \n
     print(f"First team is {first_team}")
     print(f"Fourth team is {fourth_team}")
