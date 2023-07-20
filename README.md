@@ -12,3 +12,5 @@
   - Functions + W3R Practice
   - Modules
   - Debugging
+- day-14: More Python
+  - Classes
