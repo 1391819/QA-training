@@ -44,6 +44,5 @@ new_class.get_all_students()
 new_class.student_list[0].score1 = 10
 new_class.student_list[0].score2 = 10
 new_class.student_list[0].score3 = 10
-new_class.student_list[0].get_avg_test_score()
 
 new_class.get_avg_test_score()
