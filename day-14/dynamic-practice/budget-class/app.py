@@ -9,6 +9,7 @@ Create a Budget class that can instantiate objects based on different budget cat
 # imports
 from Budget import Budget
 
+# main
 if __name__ == "__main__":
     # categories
     food = Budget("Food", 50)
