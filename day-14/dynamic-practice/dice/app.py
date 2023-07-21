@@ -11,20 +11,20 @@ from Dice import Dice
 from Character import Character
 
 if __name__ == "__main__":
-    # creating dices
+    # creating Dice instances, different amount of faces
     dice_6 = Dice(6)
     dice_20 = Dice(20)
     dice_2 = Dice(2)
     dice_4 = Dice(4)
 
-    # rolling
+    # rolling each dice
     print(f"6-sided roll: {dice_6.roll()}")
     print(f"20-sided roll: {dice_20.roll()}")
     print(f"2-sided roll: {dice_2.roll()}")
     print(f"4-sided roll: {dice_4.roll()}")
     print()
 
-    # Roll a charactor sheet for a Swashbuckler Rogue called 'Earl Grey' DnD 5th ed.
+    # rolling DnD character
     name = "Earl Grey"
     class_ = "Swashbuckler Rogue"
     abilities = {
@@ -36,5 +36,7 @@ if __name__ == "__main__":
         "Charisma": dice_20.roll(),
     }
 
+    # creating instance of Character
     new_char = Character(name, class_, abilities)
+    # displaying stats
     new_char.show_character()
