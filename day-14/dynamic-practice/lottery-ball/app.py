@@ -14,17 +14,8 @@ from Hat import Hat
 # main
 if __name__ == "__main__":
     # creating Hat instance and adding different balls
-    hat = Hat(
-        {
-            "Red": 20,
-            "Yellow": 5,
-            "Black": 7,
-            "Pink": 10,
-            "Brown": 3,
-            "White": 1,
-            "Purple": 9,
-        }
-    )
+    # no need to give a dict, we make use of Python's keyword args
+    hat = Hat(red=20, yellow=5, black=7, pink=10, brown=3, white=1, purple=9)
 
     # pick a random number of balls
     drawn_balls = hat.pick_balls()

@@ -5,6 +5,8 @@ import random
 # Hat class
 class Hat:
     # init
+    # **balls -> collects all keyword arguments and packs them into a dict
+    #            keys = colour names and values = number of balls
     def __init__(self, **balls):
         self.all_balls = []
         # for all balls (dict), save them
