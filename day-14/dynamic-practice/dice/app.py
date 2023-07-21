@@ -7,9 +7,11 @@
 
 """
 
+# imports
 from Dice import Dice
 from Character import Character
 
+# main
 if __name__ == "__main__":
     # creating Dice instances, different amount of faces
     dice_6 = Dice(6)
