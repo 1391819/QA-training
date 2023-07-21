@@ -1,3 +1,4 @@
+# Budget class
 class Budget:
     def __init__(self, category, fund=0):
         self.category = category  # category name
