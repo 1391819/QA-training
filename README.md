@@ -14,3 +14,7 @@
   - Debugging
 - day-14: More Python
   - Classes
+  - OOP
+  - Files
+- day-15: More Python
+  - Unit Testing
