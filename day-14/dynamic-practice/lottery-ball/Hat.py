@@ -2,22 +2,24 @@
 import random
 
 
-# Hat
+# Hat class
 class Hat:
-    # variable number of args?
-    # research
-    def __init__(self, balls):
+    # init
+    def __init__(self, **balls):
         self.all_balls = []
         # for all balls (dict), save them
         for colour, amount in balls.items():
             # self.all_balls.append([colour] * amount)
             self.all_balls.extend([colour] * amount)
 
+    # pick a random amount of balls from the hat
     def pick_balls(self):
+        # number of balls to draw
         n_balls_to_draw = random.randint(1, len(self.all_balls))
+        # drawn balls
         drawn_balls = random.sample(self.all_balls, n_balls_to_draw)
 
-        # we need to remove the drawn balls from the original balls list
+        # remove the drawn balls from the original balls list
         for ball in drawn_balls:
             self.all_balls.remove(ball)
 

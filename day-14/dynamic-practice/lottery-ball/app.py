@@ -1,14 +1,19 @@
 """
 
-Goal: “Create a lottery ball, or Hat, that takes a variable number of arguments that specify the number of balls of each color that are in the hat. Give the object the ability to pick a random number of balls from the hat, which will then be used to compute the probability of picking a certain distribution of balls over a large number of experiments”
+Goal:
+
+Create a lottery ball, or Hat, that takes a variable number of arguments that specify the number of balls of each color that are in the hat. 
+
+Give the object the ability to pick a random number of balls from the hat, which will then be used to compute the probability of picking a certain distribution of balls over a large number of experiments
 
 """
 
 # imports
 from Hat import Hat
 
+# main
 if __name__ == "__main__":
-    # add different balls
+    # creating Hat instance and adding different balls
     hat = Hat(
         {
             "Red": 20,
@@ -23,5 +28,6 @@ if __name__ == "__main__":
 
     # pick a random number of balls
     drawn_balls = hat.pick_balls()
+
     # print picked balls
     print(f"Drawn balls: {drawn_balls}")
