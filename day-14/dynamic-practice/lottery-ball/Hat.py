@@ -40,6 +40,7 @@ class Hat:
 
         return drawn_balls
 
+    # TODO: Fix it, it's still buggy
     # compute probability of picking a particular
     # distribution of balls over a certain amount of experiments
     def compute_probability(self, num_experiments, distribution):
