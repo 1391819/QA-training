@@ -10,14 +10,14 @@ from tutorial import Student
 
 
 class Class_:
-    """Class to manage a group of students, made using Student instances"""
+    """Class to manage a group of students, made using Student instances."""
 
-    def __init__(self, class_name: str, student_list: Student) -> None:
-        """Initialise Class instance
+    def __init__(self, class_name: str, student_list: list[Student]) -> None:
+        """Initialise Class
 
         Args:
             class_name (str): Name of the class
-            student_list (Student): List of Student instances
+            student_list (list): List of Student instances
         """
         self.class_name = class_name
         self.student_list = student_list
@@ -38,7 +38,7 @@ class Class_:
         )
 
     def get_all_students(self) -> None:
-        """Print all students"""
+        """Print all Students' names"""
         for student in self.student_list:
             print(f"Student: {student.name}")
 
@@ -53,7 +53,7 @@ if __name__ == "__main__":
     students_list = [Mary, John, Mark]
 
     # creating class
-    # this could be done student by student rather than using a list
+    # this could be done student by student rather than using a list (add to class method best way probably)
     new_class = Class_("Comp Sci", students_list)
 
     # print all students
