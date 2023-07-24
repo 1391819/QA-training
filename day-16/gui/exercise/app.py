@@ -1,3 +1,10 @@
+"""
+
+Creat a simple file reader which displays the file contents in a GUI window using Tkinter
+
+"""
+
+
 # imports
 import tkinter
 from tkinter.filedialog import askopenfilename
