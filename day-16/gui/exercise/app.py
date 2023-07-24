@@ -10,6 +10,12 @@ def show_file_content(file_content: list) -> None:
         file_content (list): List of lines - content of the file
     """
 
+    # get all children - can specify instance types
+    # labels = [w for w in root.winfo_children() if isinstance(w, tkinter.Label)]
+
+    # get input text
+    # input_text = input.get()
+
     # clear previous content of text area
     #   .END -> constant -> represents the point immediately after the last char
     text_area.delete(1.0, tkinter.END)
