@@ -18,3 +18,6 @@
   - Files
 - day-15: More Python
   - Unit Testing
+- day-16: More Python
+  - Documentation
+  - GUI/Tkinter
