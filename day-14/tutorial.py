@@ -29,3 +29,8 @@ class Student:
         """
         self.avg_test_score = (score1 + score2 + score3) / 3
         return self.avg_test_score
+
+    def __str__(self):
+        return (
+            f"Name: {self.name}, Age: {self.age}, Avg Test Score: {self.avg_test_score}"
+        )
