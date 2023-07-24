@@ -38,9 +38,9 @@ class Class_:
         )
 
     def get_all_students(self) -> None:
-        """Print all Students' names"""
+        """Print all Students"""
         for student in self.student_list:
-            print(f"Student: {student.name}")
+            print(f"Student: {student}")
 
 
 if __name__ == "__main__":
