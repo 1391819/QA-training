@@ -1,4 +1,6 @@
 class Dog:
+    # https://www.tutorialsteacher.com/python/magic-methods-in-python
+
     # magic method #1
     # one of the two methods called when we instantiate a class
     def __init__(self, name: str, age: int, breed: str) -> None:
@@ -18,8 +20,8 @@ class Dog:
     # --------------------------------------------------------------------------------
 
     # magic method #2
-    # particularly useful to have defined
-    # called when we print out the object (instead of memory allocation)
+    # particularly useful to have defined, human readable string representing the object
+    # automatically invoked on print (custom print instead of memory allocation)
     # although sometimes, for debugging purposes, seeing the memory allocation is good
     def __str__(self):
         return f"A {self.age} year old {self.breed} called {self.name}"
@@ -50,6 +52,15 @@ class Dog:
             self.breed + other_dog.breed,
         )
 
+    # magic method #6
+    # automatically invoked on print, together with __str__
+    # best practice to treat str and repr DIFFERENTLY
+    # __repr__ MUST BE a string (CODE) to evaluate used by eval to recreate the object if needed
+    #       -> done using eval()
+    #       -> different from __str__
+    def __repr__(self):
+        return f"Dog('{self.name}', {self.age}, '{self.breed}')"
+
 
 if __name__ == "__main__":
     # fido = Dog()  # Dog.__new__() gets called
@@ -64,6 +75,13 @@ if __name__ == "__main__":
     print(fido2)
     print(str(fido2).upper())  # can also use methods on conversion method
     print(fido2.__str__())  # can also be called directly, but useless pretty much
+
+    # --------------------------------------------------------------------------------
+
+    # eval / __repr__ overwritten
+    # eval pretty much recreates the object instance, as described in the object's
+    # __repr__ method
+    print(f"Eval: {eval(fido2.__repr__())}")
 
     # --------------------------------------------------------------------------------
 
