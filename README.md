@@ -8,7 +8,7 @@
   - Conditionals
   - Iterations
 - day-13: More Python
-  - Functions + W3R Practice
+  - Functions
   - Modules
   - Debugging
 - day-14: More Python
