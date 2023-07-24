@@ -16,9 +16,10 @@ class Rectangle:
         self.width = width
         self.height = height
 
+    # TODO: Refactor
     def __str__(self) -> str:
-        vertical_char = "|"
-        horizontal_char = "-"
+        vertical_char = "+"
+        horizontal_char = "+"
 
         horizontal_line = []
         vertical_line = []
@@ -50,12 +51,7 @@ class Rectangle:
         return ascii
 
     def __int__(self):
-        """Return area of the rectangle
-
-        Returns:
-            int: Area of the rectangle
-        """
-        return self.width * self.height
+        return self.calculate_are()
 
     def __repr__(self):
         return f"Rectangle({self.width}, {self.height})"
@@ -84,6 +80,9 @@ class Rectangle:
         self.width -= other_rectangle.width
         self.height -= other_rectangle.height
         return self
+
+    def calculate_are(self):
+        return self.width * self.height
 
 
 if __name__ == "__main__":
