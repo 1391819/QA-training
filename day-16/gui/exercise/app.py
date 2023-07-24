@@ -40,26 +40,7 @@ def pick_file() -> None:
 # root
 root = tkinter.Tk(className="File viewer")
 
-# -------------------------------------------------------
-# window size
-# w = 800
-# h = 650
-
-# get screen width and height
-# ws = root.winfo_screenwidth()
-# hs = root.winfo_screenheight()
-
-# calculate x and y coordinates for the root (centre)
-# x = (ws / 2) - (w / 2)
-# y = (hs / 2) - (h / 2)
-
-# set the dimensions of the screen
-# and where it is placed
-# root.geometry("%dx%d+%d+%d" % (w, h, x, y))
-
-# -------------------------------------------------------
-
-# Create a Text widget to display the file content
+# create a Text widget to display the file content
 # add wrapping just in case line is longer than window size
 text_area = tkinter.Text(root, wrap="word")
 text_area.grid(row=2, column=1)
