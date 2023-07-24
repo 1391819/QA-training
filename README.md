@@ -21,3 +21,4 @@
 - day-16: More Python
   - Documentation
   - GUI/Tkinter
+  - Dunder Methods
