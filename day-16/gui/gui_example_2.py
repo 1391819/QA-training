@@ -10,7 +10,7 @@ def strip_vowels():
     s = input.get()
     # create new label
     label = tkinter.Label(
-        root, text="".join(char for char in string if char not in "aeiouAEIOU")
+        root, text="".join(char for char in s if char not in "aeiouAEIOU")
     )
     # place label
     label.grid(row=2, column=1)
