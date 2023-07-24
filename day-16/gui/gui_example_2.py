@@ -2,8 +2,7 @@
 import tkinter
 
 
-def strip_vowels() -> None:
-    """Strip vowels from an input string taken via the root"""
+def strip_vowels():
     global label
     # destroy any existing labels on the screen
     label.destroy()
@@ -11,14 +10,14 @@ def strip_vowels() -> None:
     s = input.get()
     # create new label
     label = tkinter.Label(
-        root, text="".join(char for char in s if char not in "aeiouAEIOU")
+        root, text="".join(char for char in string if char not in "aeiouAEIOU")
     )
     # place label
     label.grid(row=2, column=1)
 
 
 # declare root of our GUI - window object
-root = tkinter.Tk()
+root = tkinter.Tk(className="Vowel Remover")
 
 # label
 label = tkinter.Label(root, text="")
