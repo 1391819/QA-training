@@ -10,6 +10,9 @@ def show_file_content(file_content: list) -> None:
         file_content (list): List of lines - content of the file
     """
 
+    # global keyword allows us to modify a variable outside of the current scope
+    # global label
+
     # get all children - can specify instance types
     # labels = [w for w in root.winfo_children() if isinstance(w, tkinter.Label)]
 
