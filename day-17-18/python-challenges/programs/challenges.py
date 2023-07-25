@@ -55,14 +55,7 @@ def func_2(string, list):
 
 
 def func_3(int1, int2, intlist):
-    bool_list = []
-    for number in intlist:
-        if number % int1 == 0 and number % int2 == 0:
-            bool_list.append(True)
-        else:
-            bool_list.append(False)
-
-    return bool_list
+    return [(int % int1 == 0 and int % int2 == 0) for int in intlist]
 
 
 # Challenge 4: write a function which:
@@ -72,13 +65,9 @@ def func_3(int1, int2, intlist):
 
 
 def func_4(string):
-    ans = ""
-    string = string.lower()
-    for char in string:
-        if 97 <= ord(char) <= 122 and ord(char) % 2 == 0:
-            ans += char
-
-    return ans
+    return "".join(
+        char for char in string.lower() if 97 <= ord(char) <= 122 and ord(char) % 2 == 0
+    )
 
 
 # Challenge 5: write a function which:
