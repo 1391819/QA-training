@@ -30,211 +30,222 @@
 # <HINT>
 # How does a for loop iterate through a string?
 
+
 def one(string):
     return ""
 
+
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
-    # <QUESTION 2>
+# <QUESTION 2>
 
-    # Write a function which returns the boolean True if the input is only divisible by one and itself.
+# Write a function which returns the boolean True if the input is only divisible by one and itself.
 
-    # The function should return the boolean False if not.
+# The function should return the boolean False if not.
 
-    # <EXAMPLES>
+# <EXAMPLES>
 
-    # two(3) → True
-    # two(8) → False
+# two(3) → True
+# two(8) → False
 
-    # <HINT>
-    # What operator will give you the remainder?
-    # Use your CLI to access the Python documentation and get help manipulating strings - help(range).
+# <HINT>
+# What operator will give you the remainder?
+# Use your CLI to access the Python documentation and get help manipulating strings - help(range).
 
 
 def two(number):
     return False
 
+
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
-    # <QUESTION 3>
+# <QUESTION 3>
 
-    # Write a function which takes an integer input, a, and returns the sum a+aa+aaa+aaaa.
+# Write a function which takes an integer input, a, and returns the sum a+aa+aaa+aaaa.
 
-    # So if 2 was the input, the function should return 2+22+222+2222 which is 2468.
+# So if 2 was the input, the function should return 2+22+222+2222 which is 2468.
 
-    # <EXAMPLES>
+# <EXAMPLES>
 
-    # three(9) → 11106
-    # three(5) → 6170
+# three(9) → 11106
+# three(5) → 6170
 
-    # <HINT>
-    # What happens if you multiply a string by a number?
+# <HINT>
+# What happens if you multiply a string by a number?
 
 
 def three(a):
     return 1
 
+
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
-    # <QUESTION 4>
+# <QUESTION 4>
 
-    # Given two Strings of equal length, 'merge' them into one String.
+# Given two Strings of equal length, 'merge' them into one String.
 
-    # Do this by 'zipping' the Strings together.
+# Do this by 'zipping' the Strings together.
 
-    # Start with the first char of the first String.
-    # Then add the first char from the second String.
-    # Then add the second char from the first String.
-    # And so on.
+# Start with the first char of the first String.
+# Then add the first char from the second String.
+# Then add the second char from the first String.
+# And so on.
 
-    # Maintain case.
+# Maintain case.
 
-    # You will not encounter whitespace.
+# You will not encounter whitespace.
 
-    # <EXAMPLES>
+# <EXAMPLES>
 
-    # four("String","Fridge") → "SFtrriidngge"
-    # four("Dog","Cat") → "DCoagt"
-    # four("True","Tree") → "TTrrueee"
-    # four("return","letter") → "rleettutrenr"
+# four("String","Fridge") → "SFtrriidngge"
+# four("Dog","Cat") → "DCoagt"
+# four("True","Tree") → "TTrrueee"
+# four("return","letter") → "rleettutrenr"
 
-    # <HINT>
-    # Use your CLI to access the Python documentation and get help manipulating strings - help(list.insert).
-    # How would you seperate a string into characters?
+# <HINT>
+# Use your CLI to access the Python documentation and get help manipulating strings - help(list.insert).
+# How would you seperate a string into characters?
 
 
 def four(string1, string2):
     return ""
 
+
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
-    # <QUESTION 5>
+# <QUESTION 5>
 
-    # Write a function to randomly generate a list with 5 even numbers between 100 and 200 inclusive.
+# Write a function to randomly generate a list with 5 even numbers between 100 and 200 inclusive.
 
-    # <EXAMPLES>
+# <EXAMPLES>
 
-    # five() → [100,102,122,198,200]
-    # five() → [108,104,106,188,200]
-    # five() → [154,102,132,178,164]
+# five() → [100,102,122,198,200]
+# five() → [108,104,106,188,200]
+# five() → [154,102,132,178,164]
 
-    # <HINT>
-    # There is a module which can be used to generate random numbers, this module is called random.
-    # The random module contains a function called randint.
+# <HINT>
+# There is a module which can be used to generate random numbers, this module is called random.
+# The random module contains a function called randint.
 
 
 def five():
     return []
 
+
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
-    # <QUESTION 6>
+# <QUESTION 6>
 
-    # Given a string, return the boolean True if it ends in "py", and False if not.
+# Given a string, return the boolean True if it ends in "py", and False if not.
 
-    # Ignore Case.
+# Ignore Case.
 
-    # For Example:
+# For Example:
 
-    # six("ilovepy") → True
-    # six("welovepy") → True
-    # six("welovepyforreal") → False
-    # six("pyiscool") → False
+# six("ilovepy") → True
+# six("welovepy") → True
+# six("welovepyforreal") → False
+# six("pyiscool") → False
 
-    # <HINT>
-    # There are no hints for this question.
+# <HINT>
+# There are no hints for this question.
 
 
 def six(string):
     return False
 
+
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
-    # <QUESTION 7>
+# <QUESTION 7>
 
-    # Given three ints, a b c, one of them is small, one is medium and one is large.
+# Given three ints, a b c, one of them is small, one is medium and one is large.
 
-    # Return the boolean True if the three values are evenly spaced, so the
-    # difference between small and medium is the same as the difference between
-    # medium and large.
+# Return the boolean True if the three values are evenly spaced, so the
+# difference between small and medium is the same as the difference between
+# medium and large.
 
-    # Do not assume the ints will come to you in a reasonable order.
+# Do not assume the ints will come to you in a reasonable order.
 
-    # <EXAMPLES>
+# <EXAMPLES>
 
-    # seven(2, 4, 6) → True
-    # seven(4, 6, 2) → True
-    # seven(4, 6, 3) → False
-    # seven(4, 60, 9) → False
+# seven(2, 4, 6) → True
+# seven(4, 6, 2) → True
+# seven(4, 6, 3) → False
+# seven(4, 60, 9) → False
 
-    # <HINT>
-    # There is a function for lists called sort.
-    # Use the cli to access the documentation help(list.sort)
+# <HINT>
+# There is a function for lists called sort.
+# Use the cli to access the documentation help(list.sort)
 
 
 def seven(a, b, c):
     return False
 
+
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
-    # <QUESTION 8>
+# <QUESTION 8>
 
-    # Given a string and an integer, n, return a string that removes n letters from the 'middle' of the string.
+# Given a string and an integer, n, return a string that removes n letters from the 'middle' of the string.
 
-    # The string length will be at least n, and be odd when the length of the input is odd, so there will always be a 'middle'.
+# The string length will be at least n, and be odd when the length of the input is odd, so there will always be a 'middle'.
 
-    # <EXAMPLES>
+# <EXAMPLES>
 
-    # eight("Hello", 3) → "Ho"
-    # eight("Chocolate", 3) → "Choate"
-    # eight("Chocolate", 1) → "Choclate"
+# eight("Hello", 3) → "Ho"
+# eight("Chocolate", 3) → "Choate"
+# eight("Chocolate", 1) → "Choclate"
 
-    # <HINT>
-    # Use the cli to access the documentation help(str.replace)
+# <HINT>
+# Use the cli to access the documentation help(str.replace)
 
 
-def eight(string,  a):
+def eight(string, a):
     return ""
 
+
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
-    # <QUESTION 9>
+# <QUESTION 9>
 
-    # Given two string inputs, if one can be made from the other return the boolean True, if not return the boolean False.
+# Given two string inputs, if one can be made from the other return the boolean True, if not return the boolean False.
 
-    # <EXAMPLES>
+# <EXAMPLES>
 
-    # nine("god", "dog") → True
-    # nine("tree", "tiredest") → True
-    # nine("cat", "dog") → False
-    # nine("tripping", "gin") → True
+# nine("god", "dog") → True
+# nine("tree", "tiredest") → True
+# nine("cat", "dog") → False
+# nine("tripping", "gin") → True
 
-    # <HINT>
-    # There are no hints for this question.
+# <HINT>
+# There are no hints for this question.
 
 
 def nine(string1, string2):
     return False
 
+
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
-    # <QUESTION 10>
+# <QUESTION 10>
 
-    # Write a function which takes 2 integers greater than 0, x,y as input and generates a 2-dimensional array.
+# Write a function which takes 2 integers greater than 0, x,y as input and generates a 2-dimensional array.
 
-    # The element value in the i-th row and j-th column of the array should be i*j.
+# The element value in the i-th row and j-th column of the array should be i*j.
 
-    # <EXAMPLES>
+# <EXAMPLES>
 
-    # ten(3,2) → [[0,0,0],[0,1,2]]
-    # ten(2,1) → [[0,0]]
-    # ten(3,4) → [[0,0,0],[0,1,2],[0,2,4],[0,3,6]]
+# ten(3,2) → [[0,0,0],[0,1,2]]
+# ten(2,1) → [[0,0]]
+# ten(3,4) → [[0,0,0],[0,1,2],[0,2,4],[0,3,6]]
 
-    # <HINT>
-    # Think about nesting for loops.
+# <HINT>
+# Think about nesting for loops.
 
 
 def ten(x, y):
     return []
+
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
