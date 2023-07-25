@@ -68,9 +68,6 @@ if __name__ == "__main__":
     # removing book from library
     library.remove_book(book5)
 
-    # displaying all books
-    library.display_books()
-
     # searching for a book in the library
     search = library.search_book(book2)
     if search:

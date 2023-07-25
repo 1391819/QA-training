@@ -28,15 +28,6 @@ class Library:
         self.books.remove(book)
         print("Book removed from library!\n")
 
-    def display_books(self) -> None:
-        """Displaying all Book instances in the Library"""
-        print(f"Displaying all {len(self.books)} books in the library:\n")
-        for book in self.books:
-            print(book)
-            print()
-
-        print("------------------------------------")
-
     def search_book(self, book: Book) -> Book:
         """Search for a Book instance in the Library
 
