@@ -7,11 +7,24 @@
 
 
 def func_1_methods(string):
-    pass
+    if len(string) % 2 == 0:
+        return string.upper()
+    else:
+        return string.lower()
 
 
 def func_1_no_methods(string):
-    pass
+    ans = ""
+    for char in string:
+        if char.isalpha():
+            if len(string) % 2 == 0:
+                ans += chr(ord(char) & ~32)
+            else:
+                ans += chr(ord(char) | 32)
+        else:
+            ans += char
+
+    return ans
 
 
 # Challenge 2: write a function which:
@@ -22,7 +35,18 @@ def func_1_no_methods(string):
 
 
 def func_2(string, list):
-    pass
+    newlist = []
+    for word in list:
+        if len(word) != len(string):
+            continue
+        else:
+            diffs = sum(c != o for c, o in zip(word.lower(), string.lower()))
+            # for i in range(len(word)):
+            #     if word.lower()[i] != string.lower()[i]:
+            #         diffs += 1
+            if diffs == 1:
+                newlist.append(word)
+    return newlist
 
 
 # Challenge 3: write a function which:
@@ -31,7 +55,14 @@ def func_2(string, list):
 
 
 def func_3(int1, int2, intlist):
-    pass
+    bool_list = []
+    for number in intlist:
+        if number % int1 == 0 and number % int2 == 0:
+            bool_list.append(True)
+        else:
+            bool_list.append(False)
+
+    return bool_list
 
 
 # Challenge 4: write a function which:
@@ -41,7 +72,13 @@ def func_3(int1, int2, intlist):
 
 
 def func_4(string):
-    pass
+    ans = ""
+    string = string.lower()
+    for char in string:
+        if 97 <= ord(char) <= 122 and ord(char) % 2 == 0:
+            ans += char
+
+    return ans
 
 
 # Challenge 5: write a function which:
@@ -52,4 +89,9 @@ def func_4(string):
 
 
 def func_5(list):
-    pass
+    factorlists = [
+        ",".join([str(num) for num in range(1, int) if int % num == 0]) for int in list
+    ]
+    outfile = "\n".join(factorlists)
+    with open("factors.csv", "w") as f:
+        f.write(outfile)
