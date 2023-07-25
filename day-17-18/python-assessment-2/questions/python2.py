@@ -118,8 +118,7 @@ def four(string1, string2):
     ans = ""
 
     for i in range(len(string1)):
-        ans += string1[i]
-        ans += string2[i]
+        ans += f"{string1[i]}{string2[i]}"
 
     return ans
 
@@ -174,9 +173,7 @@ def five():
 
 
 def six(string):
-    if string[-2:].lower() == "py":
-        return True
-    return False
+    return string.lower().endswith("py", 2)
 
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
@@ -204,7 +201,7 @@ def six(string):
 
 
 def seven(a, b, c):
-    numbers = [a, b, c]  # 2, 4, 6
+    numbers = [a, b, c]
     numbers.sort()
 
     if numbers[1] - numbers[0] == numbers[2] - numbers[1]:
