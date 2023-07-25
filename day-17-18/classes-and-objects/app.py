@@ -1,5 +1,5 @@
-from Library import Library
-from Book import Book
+from programs.library import Library
+from programs.book import Book
 
 if __name__ == "__main__":
     # creating books

@@ -1,28 +1,26 @@
 import pytest
-from programs import Book
+from programs.book import Book
 
 
 def test_search():
-    book1 = Book.Book("Sample text", 300, "123-4-56-789012-3", "Fantasy", "Alice Jones")
-    book2 = Book.Book(
-        "Generic title", 125, "321-4-57-787812-3", "Biography", "John Smith"
-    )
+    book1 = Book("Sample text", 300, "123-4-56-789012-3", "Fantasy", "Alice Jones")
+    book2 = Book("Generic title", 125, "321-4-57-787812-3", "Biography", "John Smith")
     assert book1.search("Alice Jones") == True
     assert book2.search("John Smith") == True
     assert book1.search("not a real author") == False
 
 
 def test_check_isbn():
-    assert Book.Book.check_isbn("978-0-00-821843-0") == True
-    assert not Book.Book.check_isbn("978-0-00-821843-1") == True
+    assert Book.check_isbn("978-0-00-821843-0") == True
+    assert not Book.check_isbn("978-0-00-821843-1") == True
 
     with pytest.raises(ValueError):
-        assert Book.Book.check_isbn("                         ")
+        assert Book.check_isbn("                         ")
 
 
 def test_str():
-    book1 = Book.Book("Sample text", 300, "123-4-56-789012-3", "Fantasy", "Alice Jones")
-    book2 = Book.Book("Generic title", 125, "321-4-57-787812-3", "Biography")
+    book1 = Book("Sample text", 300, "123-4-56-789012-3", "Fantasy", "Alice Jones")
+    book2 = Book("Generic title", 125, "321-4-57-787812-3", "Biography")
 
     assert (
         str(book1)

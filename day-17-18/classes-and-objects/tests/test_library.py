@@ -1,4 +1,4 @@
-from programs import Library
+from programs.library import Library
 
 
 def test_search_books_by_author():
