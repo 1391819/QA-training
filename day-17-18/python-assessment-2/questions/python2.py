@@ -32,7 +32,7 @@
 
 
 def one(string):
-    return ""
+    return "".join([char * 3 for char in string])
 
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
@@ -54,7 +54,11 @@ def one(string):
 
 
 def two(number):
-    return False
+    for i in range(2, number):
+        if number % i == 0:
+            return False
+
+    return True
 
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
@@ -75,7 +79,10 @@ def two(number):
 
 
 def three(a):
-    return 1
+    _sum = 0
+    for i in range(1, 5):
+        _sum += int(str(a) * i)
+    return _sum
 
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
@@ -108,7 +115,13 @@ def three(a):
 
 
 def four(string1, string2):
-    return ""
+    ans = ""
+
+    for i in range(len(string1)):
+        ans += string1[i]
+        ans += string2[i]
+
+    return ans
 
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
@@ -127,9 +140,18 @@ def four(string1, string2):
 # There is a module which can be used to generate random numbers, this module is called random.
 # The random module contains a function called randint.
 
+from random import randint
+
 
 def five():
-    return []
+    numbers = []
+
+    while len(numbers) < 5:
+        rand = randint(100, 200)
+        if rand % 2 == 0:
+            numbers.append(rand)
+
+    return numbers
 
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
@@ -152,6 +174,8 @@ def five():
 
 
 def six(string):
+    if string[-2:].lower() == "py":
+        return True
     return False
 
 
@@ -180,6 +204,11 @@ def six(string):
 
 
 def seven(a, b, c):
+    numbers = [a, b, c]  # 2, 4, 6
+    numbers.sort()
+
+    if numbers[1] - numbers[0] == numbers[2] - numbers[1]:
+        return True
     return False
 
 
@@ -202,7 +231,10 @@ def seven(a, b, c):
 
 
 def eight(string, a):
-    return ""
+    mid = len(string) // 2
+    to_remove = a // 2
+
+    return string[: mid - to_remove] + string[mid + to_remove + 1 :]
 
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
@@ -223,7 +255,16 @@ def eight(string, a):
 
 
 def nine(string1, string2):
-    return False
+    if len(string1) == len(string2):
+        for char in string1:
+            if char not in string2:
+                return False
+
+    for char in min([string1, string2], key=len):
+        if char not in max([string1, string2], key=len):
+            return False
+
+    return True
 
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
@@ -245,7 +286,14 @@ def nine(string1, string2):
 
 
 def ten(x, y):
-    return []
+    y_dim = []
+    for i in range(y):
+        x_dim = []
+        for j in range(x):
+            x_dim.append(i * j)
+        y_dim.append(x_dim)
+
+    return y_dim
 
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
