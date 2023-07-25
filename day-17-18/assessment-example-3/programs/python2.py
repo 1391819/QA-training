@@ -9,16 +9,23 @@
 
 # one(['apple', 'banana', 'orange', 'orange', 'apple', 'apple']) → {'apple':3, 'orange':2, 'banana':1}
 # one(['tic', 'tac', 'toe']) → {'tic':1, 'tac':1, 'toe':1}
-    
+
+
 def one(items):
-    pass
+    dict = {}
+
+    for item in items:
+        dict[item] = items.count(item)
+
+    return dict
+
 
 # <QUESTION 2>
 
 # Given two numbers, a & b, and an operator, evaluate the operation between a & b
 # using the given operator
 
-# The operator will be a string, and will only be +, -, *, or /. 
+# The operator will be a string, and will only be +, -, *, or /.
 
 # <EXAMPLES>
 
@@ -27,8 +34,22 @@ def one(items):
 # two(3, 1.5, '*') → 4.5
 # two(-5, 2, '/') → -2.5
 
+
 def two(a, b, operator):
-    pass
+    if operator == "+":
+        return a + b
+    elif operator == "-":
+        return a - b
+    elif operator == "*":
+        return a * b
+    elif operator == "/":
+        if b == 0:
+            return "Cannot divide by 0"
+        else:
+            return a / b
+    else:
+        return None
+
 
 # <QUESTION 3>
 
@@ -47,8 +68,17 @@ def two(a, b, operator):
 
 # We can use `x ** 0.5` to get the square root of `x`
 
+
 def three(num):
-    pass
+    if (num**0.5) % 1 == 0:
+        return num
+    else:
+        for i in reversed(range(num)):
+            if (i**0.5) % 1 == 0:
+                return i
+
+    return None
+
 
 # <QUESTION 4>
 
@@ -60,8 +90,16 @@ def three(num):
 # four(18, 11) → 1
 # four(10, 50) → 10
 
+
 def four(a, b):
-    pass
+    greatest_common_factor = 1
+
+    for i in range(1, min(a, b) + 1):
+        if a % i == 0 and b % i == 0:
+            greatest_common_factor = i
+
+    return greatest_common_factor
+
 
 # <QUESTION 5>
 
@@ -80,5 +118,18 @@ def four(a, b):
 # five('hello world') → 'gdkkn vnqkc'
 # five('54321') → '54321'
 
+
 def five(string):
-    pass
+    ans = ""
+    for char in string:
+        if char.isalpha():
+            if char in ["a", "A"]:
+                _dict = {"a": "z", "A": "Z"}
+                ans += _dict[char]
+            else:
+                previous = chr(ord(char) - 1)
+                ans += previous
+        else:
+            ans += char
+
+    return ans
