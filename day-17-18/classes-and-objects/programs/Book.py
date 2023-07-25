@@ -101,6 +101,14 @@ class Book:
             return False
 
     def search(self, author: str) -> bool:
+        """Check if specified author is the Book's author
+
+        Args:
+            author (str): Author to be checked
+
+        Returns:
+            bool: True if specified author is Book's author, False otherwise
+        """
         if self.author == author:
             return True
         else:
