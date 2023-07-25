@@ -12,12 +12,7 @@
 
 
 def one(items):
-    dict = {}
-
-    for item in items:
-        dict[item] = items.count(item)
-
-    return dict
+    return {item: items.count(item) for item in items}
 
 
 # <QUESTION 2>
@@ -36,19 +31,10 @@ def one(items):
 
 
 def two(a, b, operator):
-    if operator == "+":
-        return a + b
-    elif operator == "-":
-        return a - b
-    elif operator == "*":
-        return a * b
-    elif operator == "/":
-        if b == 0:
-            return "Cannot divide by 0"
-        else:
-            return a / b
-    else:
-        return None
+    _dict = {"+": a + b, "-": a - b, "*": a * b, "/": a / b}
+    if operator == "/" and b == 0:
+        return "Cannot divide by 0!"
+    return _dict[operator]
 
 
 # <QUESTION 3>
