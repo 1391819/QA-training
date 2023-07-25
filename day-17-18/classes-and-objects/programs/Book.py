@@ -100,73 +100,8 @@ class Book:
         else:
             return False
 
-    def search(self, author):
+    def search(self, author: str) -> bool:
         if self.author == author:
             return True
         else:
             return False
-
-
-if __name__ == "__main__":
-    # creating books
-    book1 = Book(
-        "The Forgotten Garden",
-        560,
-        "978-1416550549",
-        "Historical Fiction",
-        "Kate Morton",
-    )
-
-    book2 = Book(
-        "Dark Matter",
-        352,
-        "978-1101904220",
-        "Science Fiction, Thriller",
-        "Blake Crouch",
-    )
-
-    book3 = Book(
-        "Educated: A Memoir",
-        352,
-        "978-0399590504",
-        "Memoir, Autobiography",
-        "Tara Westover",
-    )
-
-    book4 = Book(
-        "Circe",
-        400,
-        "978-0316556347",
-        "Fantasy, Mythology",
-        "Madeline Miller",
-    )
-
-    book5 = Book(
-        "The Silent Patient",
-        336,
-        "978-1250301697",
-        "Psychological Thriller",
-        "Alex Michaelides",
-    )
-
-    # printing book info
-    print(book1)
-
-    # checking isbn
-    print(book1.check_isbn("978-1416550549"))
-
-    # creating library - very simple for now
-    library = [book1, book2, book3, book4, book5]
-
-    # searching for a particular author's books
-    author = "Alex Michaelides"
-    author_books = []
-
-    # searching books written by the requested author
-    for book in library:
-        if book.search(author):
-            author_books.append(book)
-
-    # printing books by the requested author
-    for book in author_books:
-        print(book)
