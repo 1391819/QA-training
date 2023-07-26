@@ -71,7 +71,8 @@ class Book:
 
         # raise errors in case of invalid isbns
         if len(isbn) != 13:
-            raise (ValueError("ISBN must contain 13 digits"))
+            # raise (ValueError("ISBN must contain 13 digits"))
+            return False
 
         # get check digit
         check_digit = int(isbn[-1])
