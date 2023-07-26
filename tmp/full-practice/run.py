@@ -7,3 +7,8 @@ create a flask app which allows users to:
 - update books that have already been added (stretch goal)
 - delete books from the system (stretch goal)
 """
+
+from application import app
+
+if __name__ == "__main__":
+    app.run(debug=True)
