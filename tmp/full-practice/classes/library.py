@@ -38,7 +38,6 @@ class Library:
         isbn: str,
         new_title: str = None,
         new_pages: int = None,
-        new_isbn: str = None,
         new_genre: str = None,
         new_author: str = None,
     ) -> bool:
@@ -48,7 +47,6 @@ class Library:
             isbn (str): ISBN of the book that needs to be updated
             new_title (str, optional): New title of the book. Defaults to None.
             new_pages (int, optional): New number of pages of the book. Defaults to None.
-            new_isbn (str, optional): New ISBN of the book. Defaults to None.
             new_genre (str, optional): New genre of the book. Defaults to None.
             new_author (str, optional): New author of the book. Defaults to None.
 
@@ -62,9 +60,6 @@ class Library:
 
                 if new_pages:
                     book.pages = new_pages
-
-                if new_isbn:
-                    book.isbn = new_isbn
 
                 if new_genre:
                     book.genre = new_genre
