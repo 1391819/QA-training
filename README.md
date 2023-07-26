@@ -22,4 +22,4 @@
   - GUI/Tkinter
   - Dunder Methods
 - day-17-18: Practice days
-  - Practice exercises regarding topics covered until now
+  - Practice exercises regarding topics covered until now using different resources
