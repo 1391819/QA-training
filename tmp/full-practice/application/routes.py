@@ -30,7 +30,7 @@ def index():
         return [book_builder(book) for book in library.books]
     else:
         return [], 200
-        # return "There are no books currently in the library."
+        # return "There are no books currently in the library"
 
 
 @app.route("/add")
@@ -64,10 +64,9 @@ def add_book():
     if not title or not pages or not isbn or not genre:
         return "Missing required parameters"
 
-    # TODO: Add isbn validation?
-    # has_valid_isbn = Book.check_isbn(isbn)
-    # if not has_valid_isbn:
-    #    return "Please enter a correct ISBN", 400
+    is_valid_isbn = Book.check_isbn(isbn)
+    if not is_valid_isbn:
+        return f"ISBN {isbn} is not a valid ISBN", 400
 
     if not author:
         book = Book(title, pages, isbn, genre)
@@ -114,6 +113,10 @@ def update_book(isbn: str):
         str: Message
     """
 
+    is_valid_isbn = Book.check_isbn(isbn)
+    if not is_valid_isbn:
+        return f"ISBN {isbn} is not a valid ISBN", 400
+
     new_title = request.args.get("title")
     new_pages = request.args.get("pages")
     new_genre = request.args.get("genre")
@@ -144,6 +147,10 @@ def delete_book(isbn: str):
     Returns:
         str: Message
     """
+
+    is_valid_isbn = Book.check_isbn(isbn)
+    if not is_valid_isbn:
+        return f"ISBN {isbn} is not a valid ISBN", 400
 
     if library.remove_book(isbn):
         return f"Book with ISBN {isbn} removed from library", 200
