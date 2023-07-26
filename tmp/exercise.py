@@ -1,6 +1,7 @@
 """
 
-Write a random name generator which allows a user to generate a random firstname + lastname combination
+Write a random name generator which allows a user to generate a random firstname + lastname 
+combination
 
 """
 from random import randint
@@ -17,6 +18,11 @@ def index():
 
 
 def random_generator():
+    """Generate a random first name + last name
+
+    Returns:
+        str: String representation of random full name
+    """
     first_name_list = ["Roberto", "Amy", "Sarah", "Mark", "John"]
     last_name_list = ["Nacu", "Robinsons", "Smith", "Johnson"]
 
