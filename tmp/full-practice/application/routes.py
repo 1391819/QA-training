@@ -17,25 +17,25 @@ def index():
 
 @app.route("/add")
 def add_book():
-    # add new books with information supplied via url/query params
+    """Add a new book to the library
+
+    Returns:
+        str: Message
+    """
 
     # examples
-    # /add?title=Title&pages=200&isbn=1231231231231&genre=Fantasy
 
-    """
-    /add?title=ToKillaMockingbird&pages=336&isbn=978-0061120084&genre=Fiction&author=HarperLee
-    /add?title=1984&pages=328&isbn=978-0451524935&genre=Fiction&author=GeorgeOrwell
-    /add?title=AnimalFarm&pages=328&isbn=123123123&genre=Fiction&author=GeorgeOrwell
-    /add?title=PrideandPrejudice&pages=432&isbn=978-0141439518&genre=Classic&author=JaneAusten
-    /add?title=TheGreatGatsby&pages=180&isbn=978-0743273565&genre=Fiction&author=F.ScottFitzgerald
-    /add?title=TheCatcherintheRye&pages=240&isbn=978-0316769488&genre=Fiction&author=J.D.Salinger
-    /add?title=HarryPotterandtheSorcerer'sStone&pages=320&isbn=978-0590353427&genre=Fantasy&author=J.K.Rowling
-    /add?title=ToAlltheBoysI'veLovedBefore&pages=384&isbn=978-1442426702&genre=YoungAdult&author=JennyHan
-    /add?title=TheLordoftheRings:TheFellowshipoftheRing&pages=432&isbn=978-0618346257&genre=Fantasy&author=J.R.R.Tolkien
-    /add?title=TheHungerGames&pages=384&isbn=978-0439023528&genre=YoungAdult&author=SuzanneCollins
-    /add?title=TheDaVinciCode&pages=592&isbn=978-0307474278&genre=Mystery&author=DanBrown
-
-    """
+    # /add?title=ToKillaMockingbird&pages=336&isbn=978-0061120084&genre=Fiction&author=HarperLee
+    # /add?title=1984&pages=328&isbn=978-0451524935&genre=Fiction&author=GeorgeOrwell
+    # /add?title=AnimalFarm&pages=328&isbn=123123123&genre=Fiction&author=GeorgeOrwell
+    # /add?title=PrideandPrejudice&pages=432&isbn=978-0141439518&genre=Classic&author=JaneAusten
+    # /add?title=TheGreatGatsby&pages=180&isbn=978-0743273565&genre=Fiction&author=F.ScottFitzgerald
+    # /add?title=TheCatcherintheRye&pages=240&isbn=978-0316769488&genre=Fiction&author=J.D.Salinger
+    # /add?title=HarryPotterandtheSorcerer'sStone&pages=320&isbn=978-0590353427&genre=Fantasy&author=J.K.Rowling
+    # /add?title=ToAlltheBoysI'veLovedBefore&pages=384&isbn=978-1442426702&genre=YoungAdult&author=JennyHan
+    # /add?title=TheLordoftheRings:TheFellowshipoftheRing&pages=432&isbn=978-0618346257&genre=Fantasy&author=J.R.R.Tolkien
+    # /add?title=TheHungerGames&pages=384&isbn=978-0439023528&genre=YoungAdult&author=SuzanneCollins
+    # /add?title=TheDaVinciCode&pages=592&isbn=978-0307474278&genre=Mystery&author=DanBrown
 
     title = request.args.get("title")
     pages = request.args.get("pages")
@@ -46,7 +46,7 @@ def add_book():
     if not title or not pages or not isbn or not genre:
         return "Missing required parameters"
 
-    # TODO: Add isbn validation
+    # TODO: Add isbn validation?
     # has_valid_isbn = Book.check_isbn(isbn)
     # if not has_valid_isbn:
     #    return "Please enter a correct ISBN", 400
@@ -63,6 +63,14 @@ def add_book():
 
 @app.route("/search/<string:author>")
 def search_book(author: str):
+    """Search for books written by a particular author
+
+    Args:
+        author (str): Author who we are looking for
+
+    Returns:
+        list: List of the books written by the author
+    """
     # search for books by a given author
 
     # example
@@ -73,15 +81,20 @@ def search_book(author: str):
     if author_books:
         return [str(book) for book in author_books]
     else:
+        # return []
         return "There are no books by the specified author"
 
 
 @app.route("/update/<string:isbn>")
 def update_book(isbn: str):
-    # update books that have already been added based on isbn
+    """Update a book based on its ISBN
 
-    # example
-    # /update/978-0307474278?title=new_title&pages=1&isbn=123&genre=new_genre&author=fake_author
+    Args:
+        isbn (str): ISBN of the book that needs to be updated
+
+    Returns:
+        str: Message
+    """
 
     new_title = request.args.get("title")
     new_pages = request.args.get("pages")
@@ -113,10 +126,14 @@ def update_book(isbn: str):
 
 @app.route("/delete/<string:isbn>")
 def delete_book(isbn: str):
-    # delete books from the system based on title
+    """Delete a book from the library based on its ISBN
 
-    # example
-    # /delete/1231233
+    Args:
+        isbn (str): ISBN of the book to remove from the library
+
+    Returns:
+        str: Message
+    """
 
     if library.remove_book(isbn):
         return "Book removed from library"
