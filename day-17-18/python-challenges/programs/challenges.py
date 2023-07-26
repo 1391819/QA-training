@@ -1,3 +1,5 @@
+# https://github.com/agray998/python-challenges
+
 # These challenges are intended to provide practice in basic python skills such as string manipulation, iteration, use of collection types and conditionals
 
 # Challenge 1: Write a function which:
