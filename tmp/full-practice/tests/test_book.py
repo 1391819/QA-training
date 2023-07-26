@@ -13,9 +13,7 @@ def test_check_author():
 def test_check_isbn():
     assert Book.check_isbn("978-0-00-821843-0") == True
     assert not Book.check_isbn("978-0-00-821843-1") == True
-
-    with pytest.raises(ValueError):
-        assert Book.check_isbn("                         ")
+    assert Book.check_isbn("123") == False
 
 
 def test_str():
@@ -24,9 +22,9 @@ def test_str():
 
     assert (
         str(book1)
-        == "Written by Alice Jones, Sample text is a gripping 300-page Fantasy novel"
+        == "Written by Alice Jones, Sample text is a gripping 300-page Fantasy novel. ISBN: 123-4-56-789012-3"
     )
     assert (
         str(book2)
-        == "Written by Unknown, Generic title is a gripping 125-page Biography novel"
+        == "Written by Unknown, Generic title is a gripping 125-page Biography novel. ISBN: 321-4-57-787812-3"
     )

@@ -1,8 +1,6 @@
 from classes.library import Library
 from classes.book import Book
 
-# TODO: These tests will fail, need to remake them
-
 
 def test_search_books_by_author():
     book1 = Book(
@@ -49,5 +47,31 @@ def test_remove_book():
     library.add_book(book1)
     library.add_book(book2)
 
-    library.remove_book(book2)
-    assert book2 not in library.books
+    assert library.remove_book("978-1416550549") == True
+    assert library.remove_book("1231312323123123123123123") == False
+
+
+def test_update_book():
+    library = Library()
+
+    book1 = Book(
+        "The Forgotten Garden",
+        560,
+        "978-1416550549",
+        "Historical Fiction",
+        "Kate Morton",
+    )
+    book2 = Book("Sample text", 300, "123-4-56-789012-3", "Fantasy", "Alice Jones")
+
+    library.add_book(book1)
+    library.add_book(book2)
+
+    assert library.update_book("123") == False
+    assert library.update_book("978-1416550549") == True
+
+    assert (
+        library.update_book(
+            "123-4-56-789012-3", "test_title", 1, "test_genre", "test_author"
+        )
+        == True
+    )
