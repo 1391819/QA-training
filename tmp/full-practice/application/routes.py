@@ -83,26 +83,32 @@ def update_book(isbn: str):
     # example
     # /update/978-0307474278?title=new_title&pages=1&isbn=123&genre=new_genre&author=fake_author
 
-    title = request.args.get("title")
-    pages = request.args.get("pages")
-    isbn = request.args.get("isbn")
-    genre = request.args.get("genre")
-    author = request.args.get("author")
+    new_title = request.args.get("title")
+    new_pages = request.args.get("pages")
+    new_isbn = request.args.get("isbn")
+    new_genre = request.args.get("genre")
+    new_author = request.args.get("author")
 
-    if not title and not pages and not isbn and not genre and not author:
+    if (
+        not new_title
+        and not new_pages
+        and not new_isbn
+        and not new_genre
+        and not new_author
+    ):
         return "You must specify at least one parameter to update"
 
     if library.update_book(
         isbn=isbn,
-        new_title=title,
-        new_pages=pages,
-        new_isbn=isbn,
-        new_genre=genre,
-        new_author=author,
+        new_title=new_title,
+        new_pages=new_pages,
+        new_isbn=new_isbn,
+        new_genre=new_genre,
+        new_author=new_author,
     ):
         return "Book updated successfully"
 
-    return "Something unexpected happened. Could not update book!"
+    return "Book was not found in the library!"
 
 
 @app.route("/delete/<string:isbn>")
