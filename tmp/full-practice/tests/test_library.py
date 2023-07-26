@@ -1,6 +1,8 @@
 from classes.library import Library
 from classes.book import Book
 
+# TODO: These tests will fail, need to remake them
+
 
 def test_search_books_by_author():
     book1 = Book(
