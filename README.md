@@ -23,3 +23,4 @@
   - Dunder Methods
 - day-17-18: Practice days
   - Practice exercises regarding topics covered until now using different resources
+- tmp: Flask
