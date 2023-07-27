@@ -23,4 +23,6 @@
   - Dunder Methods
 - day-17-18: Practice days
   - Practice exercises regarding topics covered until now using different resources
+- day-19: Jenkins
+  - See jenkins-practice repo 
 - tmp: Flask
