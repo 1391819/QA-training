@@ -7,22 +7,22 @@
   - Collections
   - Conditionals
   - Iterations
-- day-13: More Python
+- day-13: Python
   - Functions
   - Modules
   - Debugging
-- day-14: More Python
+- day-14: Python
   - Classes
   - OOP
   - Files
-- day-15: More Python
+- day-15: Python
   - Unit Testing
-- day-16: More Python
+- day-16: Python
   - Documentation
   - GUI/Tkinter
   - Dunder Methods
-- day-17-18: Practice days
+- day-17-18: Python + Flask
   - Practice exercises regarding topics covered until now using different resources
+  - Flask intro
 - day-19: Jenkins
-  - See jenkins-practice repo 
-- tmp: Flask
+  - See jenkins-practice repo
