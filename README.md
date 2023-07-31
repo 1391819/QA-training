@@ -28,5 +28,4 @@
 - day-19-20: Jenkins
   - See jenkins-practice repo
 - day-21:
-  - HTML Intro
-- 
+  - HTML 
