@@ -24,5 +24,7 @@
 - day-17-18: Python + Flask
   - Practice exercises regarding topics covered until now using different resources
   - Flask intro
-- day-19: Jenkins
+- day-19-20: Jenkins
   - See jenkins-practice repo
+- day-21:
+- 
