@@ -1,0 +1,22 @@
+.div-1 {
+    border: 1px solid plum;
+    font-size: 1.2em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: .85em;
+}
+
+.div-2 {
+    border: 1px solid plum;
+    font: 1.5em "Trebuchet MS";
+    font-weight: bold;
+    font-style: italic;
+    text-transform: lowercase;
+    text-indent: 1.5em;
+}
+
+.div-3 {
+    border: 1px solid plum;
+    color: red;
+    font: italic small-caps 1.1em "Trebuchet MS", sans-serif;
+    text-align: center;
+}
