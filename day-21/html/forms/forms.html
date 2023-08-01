@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sign up Form</title>
+	</head>
+	<body>
+		<form method="POST" action="index.html">
+			<h1>Sign up form</h1>
+			<fieldset>
+				<legend>Your basic info</legend>
+				<label for="name">Name:</label>
+				<br />
+				<input
+					id="name"
+					type="text"
+					placeholder="Enter your name"
+					required
+				/>
+				<br />
+				<br />
+				<label for="email">Email:</label>
+				<br />
+				<input
+					id="mail"
+					type="email"
+					placeholder="Enter your email"
+					required
+				/>
+				<br />
+				<br />
+				<label for="password">Password:</label>
+				<br />
+				<input type="password" id="password" required />
+				<br />
+				<br />
+				<label>Gender</label>
+				<br />
+				<input
+					type="radio"
+					id="m_gender"
+					value="m_gender"
+					name="gender"
+					required
+				/><label for="m_gender">Male</label>
+				<br />
+				<input
+					type="radio"
+					id="f_gender"
+					value="f_gender"
+					name="gender"
+				/><label for="f_gender">Female</label>
+			</fieldset>
+
+			<button type="reset">Reset</button>
+			<button type="submit">Sign up</button>
+		</form>
+	</body>
+</html>
