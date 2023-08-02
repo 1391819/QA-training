@@ -1,0 +1,27 @@
+p::first-line {
+    color: blue;
+}
+
+p::first-letter {
+    font-size: xx-large;
+    color: red;
+}
+
+p::before {
+    content: "I added this before";
+}
+
+p::after {
+    content: "I added this after";
+}
+
+/* body > p:last-of-type { */
+/* p[class="highlight"]:hover { */
+body > p[class="highlight"]:last-of-type:hover {
+    background-color: antiquewhite;
+}
+
+form > input:focus {
+    background-color: lightblue;
+}
+
