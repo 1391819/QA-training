@@ -1,0 +1,38 @@
+body * {
+    border: 1px solid plum;
+}
+
+body > h2 {
+    text-align: center;
+}
+
+h2 + p {
+    color: red;
+}
+
+.first-class {
+    text-align: right;
+    background-color: antiquewhite;
+}
+
+#first-id {
+    background-color: brown;
+    color: white;
+}
+
+
+#first-id > h2 ~ p {
+    color: blue;
+}
+
+p.first-class {
+    color: yellow;
+    background-color: chocolate;
+}
+
+p.first-class:hover {
+    transform: scale(1, 1.5);
+
+}
+
+
