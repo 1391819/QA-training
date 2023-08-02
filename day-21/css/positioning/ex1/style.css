@@ -1,0 +1,15 @@
+body * {
+    border: 1px solid plum;
+}
+
+.hidden {
+   visibility: hidden;
+}
+
+.list li {
+    display: inline;
+}
+
+strong {
+    display: block;
+}
