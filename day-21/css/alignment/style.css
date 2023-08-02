@@ -1,0 +1,20 @@
+.right-absolute {
+    border: 1px solid plum;
+    position: absolute;
+    right: 0px;
+    width: 200px;
+    margin-top: 700px;
+}
+
+.centre-margins {
+    border: 1px solid red;
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+}
+
+.flexbox {
+    border: 1px solid blue;
+    display: flex;
+    justify-content: center;
+}
