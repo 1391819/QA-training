@@ -1,0 +1,23 @@
+em {
+    color: blue;
+}
+
+header > h1 {
+    color: limegreen;
+}
+
+#first-article footer {
+    color: red;
+}
+
+#first-article > h1 + p {
+    color: purple;
+}
+
+#second-article > h1 ~ p {
+    color: grey;
+}
+
+p.hover:hover {
+    transform: scale(1, 1.2);
+}
