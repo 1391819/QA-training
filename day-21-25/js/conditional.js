@@ -35,7 +35,7 @@ Create a IF statement that satifies the following:
 // // can be done with ifs, but I think it looks better this way
 // // simple explanation:
 // // 		true just to avoid strict equality === between arg and cases
-// // 		if we pass age, we'd never go inside the cases since they are either true or false
+// // 		if we pass age, we'd never go inside the cases since they are either true or false, not an int
 // switch (true) {
 // 	case age >= 18 && age <= 65:
 // 		console.log('Age is between 18 and 65');
