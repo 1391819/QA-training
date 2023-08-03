@@ -4,14 +4,14 @@
 
 // using a for loop
 // for (let a = 100; a <= 200; a++) {
-// 	console.log(`a = ${a}`);
+// 	console.log(a);
 // }
 
 // using a while loop
 // let a = 100;
 // while (a <= 200) {
 // 	a++;
-// 	console.log(`a = ${a}`);
+// 	console.log(a);
 // }
 
 // ------------------------------------
