@@ -34,7 +34,7 @@ Create a IF statement that satifies the following:
 
 // // can be done with ifs, but I think it looks better this way
 // // simple explanation:
-// // 		true just to avoid string equality === between arg and cases
+// // 		true just to avoid strict equality === between arg and cases
 // // 		if we pass age, we'd never go inside the cases since they are either true or false
 // switch (true) {
 // 	case age >= 18 && age <= 65:
@@ -78,27 +78,27 @@ Criteria:
 
 */
 
-// let day = new Date().getDay();
-// // console.log(day); // debug
+let day = new Date().getDay();
+// console.log(day); // debug
 
-// switch (day) {
-// 	case 0:
-// 		console.log('Monday');
-// 	case 1:
-// 	case 2:
-// 	case 3:
-// 	case 4:
-// 		console.log('Can be any day, Tuesday to Friday');
-// 		break;
-// 	case 5:
-// 		console.log('Saturday');
-// 		break;
-// 	case 6:
-// 		console.log('Sunday');
-// 		break;
-// 	default:
-// 		console.log('Invalid day');
-// 		break;
-// }
+switch (day) {
+	case 0:
+		console.log('Monday');
+	case 1:
+	case 2:
+	case 3:
+	case 4:
+		console.log('Can be any day, Tuesday to Friday');
+		break;
+	case 5:
+		console.log('Saturday');
+		break;
+	case 6:
+		console.log('Sunday');
+		break;
+	default:
+		console.log('Invalid day');
+		break;
+}
 
 // ------------------------------------
