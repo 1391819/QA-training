@@ -45,6 +45,6 @@ Create a console.log() with a message which uses the following CSS properties:
 */
 
 let customCSS =
-	"color: orange; font-family: 'Fantasy'; font-weight: bold; background-color: black; padding: 10px;";
+	'color: orange; font-family: "Fantasy"; font-weight: bold; background-color: black; padding: 10px;';
 
 console.log('This is a message with %c custom CSS', customCSS);
