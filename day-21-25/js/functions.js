@@ -16,7 +16,8 @@ console.log(substraction(5, 2));
 
 /*
 
-Create a function expression called welcome that take in name, age,gender as a parameters. The outcome should be like so:
+Create a function expression called welcome that take in name, age,gender as a parameters. 
+The outcome should be like so:
     
     e.g. "My name is Felix Cited, i am 20 years old and of gender Male
 
@@ -31,7 +32,8 @@ console.log(welcome('Roberto', 24, 'male'));
 
 /*
 
-Create an arrow function called powerUp that takes in two values n1 and n2. The arrow function will return the power of the two numbers.
+Create an arrow function called powerUp that takes in two values n1 and n2. 
+The arrow function will return the power of the two numbers.
 
 e.g.
     n1=2, n2=3 will return 8 (2 x 2 x 2);
