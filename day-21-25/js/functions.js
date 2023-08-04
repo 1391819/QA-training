@@ -28,6 +28,7 @@ const welcome = function (name, age, gender) {
 };
 
 console.log(welcome('Roberto', 24, 'male'));
+
 // ------------------------------------
 
 /*
