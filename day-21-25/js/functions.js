@@ -6,11 +6,11 @@ Create a function that takes in 2 parameters num1 and num2 and subtracts the two
 
 */
 
-function substraction(num1, num2) {
+function subtraction(num1, num2) {
 	return num1 - num2;
 }
 
-console.log(substraction(5, 2));
+console.log(subtraction(5, 2));
 
 // ------------------------------------
 
