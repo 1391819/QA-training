@@ -28,6 +28,4 @@
 - day-19-20: Jenkins
   - See jenkins-practice repo
 - day-21-25:
-  - HTML
-  - CSS
-  - JS
+  - HTML, CSS, and JS
