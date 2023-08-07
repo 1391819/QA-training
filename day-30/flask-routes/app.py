@@ -16,12 +16,12 @@ app = Flask(__name__)
 
 @app.route("/")
 @app.route("/home")
-def home():
+def home() -> str:
     return "This is the home page"
 
 
 @app.route("/about")
-def about():
+def about() -> str:
     return "This is the about page"
 
 
