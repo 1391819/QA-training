@@ -27,7 +27,7 @@
   - Flask intro
 - day-19-20: Jenkins
   - See jenkins-practice repo
-- day-21-25:
+- day-21-25: Web Development
   - HTML, CSS, and JS
-- day-30:
+- day-30: Python
   - More Flask
