@@ -10,6 +10,7 @@
 """
 
 from flask import Flask, redirect, url_for
+from werkzeug.wrappers import Response
 
 app = Flask(__name__)
 
@@ -39,7 +40,7 @@ def squared(number: int) -> str:
 
 
 @app.route("/testing_redirect")
-def testing_redirect():
+def testing_redirect() -> Response:
     return redirect(url_for("about"))
 
 
