@@ -29,3 +29,5 @@
   - See jenkins-practice repo
 - day-21-25:
   - HTML, CSS, and JS
+- day-30:
+  - More Flask
