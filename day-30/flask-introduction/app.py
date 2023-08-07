@@ -1,3 +1,5 @@
+# A basic app that displays a message saying Hello internet!.
+
 from flask import Flask
 
 app = Flask(__name__)
