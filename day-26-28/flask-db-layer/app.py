@@ -1,11 +1,14 @@
+# -----------------------------------------
+# imports
 from flask import Flask, redirect, url_for
 from werkzeug.wrappers import Response
 from flask_sqlalchemy import SQLAlchemy
 import os
 from dotenv import load_dotenv
 
+# -----------------------------------------
+# config and db connection
 app = Flask(__name__)
-
 
 # loading environment variables
 # this is also used by flask's .run() behind the scenes
@@ -27,10 +30,12 @@ app.config["SQLALCHEMY_DATABASE_URI"] = (
 # built-in database - sqlite
 # app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///data.db"
 
-
+# this is creating a simulation of the database as an object in our application
 db = SQLAlchemy(app)
 
 
+# -----------------------------------------
+# view functions
 @app.route("/")
 @app.route("/home")
 def home() -> str:
@@ -60,5 +65,7 @@ def testing_redirect() -> Response:
     return redirect(url_for("about"))
 
 
+# -----------------------------------------
+# main
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000)
