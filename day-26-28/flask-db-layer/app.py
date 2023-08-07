@@ -24,7 +24,7 @@ app.config["SQLALCHEMY_DATABASE_URI"] = (
     DB_TYPE + DB_USER + DB_PASSWORD + DB_HOST + DB_NAME
 )
 
-# built-in database
+# built-in database - sqlite
 # app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///data.db"
 
 
