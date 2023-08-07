@@ -29,5 +29,8 @@
   - See jenkins-practice repo
 - day-21-25: Web Development
   - HTML, CSS, and JS
-- day-26-28: Python
-  - More Flask
+- day-26-28: Flask
+  - Intro
+  - Routes
+  - Database Layer
+  - Database Schema
