@@ -26,7 +26,7 @@ def about():
 
 
 @app.route("/squared/<int:number>")
-def squared(number: int):
+def squared(number: int) -> str:
     """Read a number in the URL (URL parameters/dynamic URL)
 
     Args:
