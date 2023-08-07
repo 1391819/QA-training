@@ -9,7 +9,7 @@
     127.0.0.1 - - [07/Aug/2023 12:27:39] "GET /about HTTP/1.1" 200 -
 """
 
-from flask import Flask
+from flask import Flask, redirect, url_for
 
 app = Flask(__name__)
 
@@ -36,6 +36,11 @@ def squared(number: int) -> str:
         string: String displaying squared number
     """
     return f"Squared number is: {number**2}"
+
+
+@app.route("/testing_redirect")
+def testing_redirect():
+    return redirect(url_for("about"))
 
 
 if __name__ == "__main__":
