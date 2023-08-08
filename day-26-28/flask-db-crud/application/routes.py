@@ -45,6 +45,9 @@ def update(name) -> str:
     return first_game.name
 
 
+# done like this simply because that was the task specification
+# in a real world scenario, you always want to have control over what you are deleting
+# e.g., -> pass an URL parameter (id) and use .query.filter_by(id=id).first()
 @app.route("/delete")
 def delete() -> str:
     """Delete endpoint: delete the first entry in the database
