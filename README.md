@@ -34,3 +34,8 @@
   - Routes
   - Database Layer
   - Database Schema
+  - Database Relationships
+  - Database CRUD
+  - Templating 
+  - User input, forms, and form validators
+  - Unit testing + Flask integration testing
