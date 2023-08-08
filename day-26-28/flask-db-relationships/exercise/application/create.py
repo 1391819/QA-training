@@ -1,3 +1,7 @@
+# putting this file here is, technically speaking, a mistake
+# all the database handling will be done using view functions
+# in routes.py
+
 from application import app, db
 from application.models import Orders, Products, OrdersProducts
 
@@ -36,8 +40,8 @@ with app.app_context():
     db.session.add(orders_products4)
     db.session.commit()
 
+    # debug
     print(f"Order 1 on date {order1.order_date}")
     print(f"Order 2 on date {order2.order_date}")
     print(f"Product 1 is: {soap.product_name}")
     print(f"Product 2 is: {apple_juice.product_name}")
-    # TOOD: Search how to query orders_products table to get full info

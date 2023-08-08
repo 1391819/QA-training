@@ -1,3 +1,7 @@
+# putting this file here is, technically speaking, a mistake
+# all the database handling will be done using view functions
+# in routes.py
+
 from application import app, db
 from application.models import Users
 
