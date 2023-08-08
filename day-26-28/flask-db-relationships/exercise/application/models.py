@@ -18,6 +18,8 @@ class Products(db.Model):
     orders_products = db.relationship("OrdersProducts", backref="products")
 
 
+# no need to add an _ between Orders and Products
+# this is done automatically by SQLAlchemy
 class OrdersProducts(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     order_id = db.Column(
