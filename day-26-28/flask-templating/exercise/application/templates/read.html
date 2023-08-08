@@ -1,0 +1,6 @@
+{% extends "layout.html" %} {% block content %}
+<h2>List of all games</h2>
+{% for game in games %}
+
+<p>{{ game.id }}: {{ game.name }}</p>
+{% endfor %} {% endblock content %}
