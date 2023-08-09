@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>Login</title>
+	</head>
+	<body>
+		<h1>Login</h1>
+		<form method="POST" action="">
+			{{ form.hidden_tag() }} {{ form.name.label }} {{ form.name }}
+			<!-- 
+            This is for custom validators
+            {% if form.name.errors %}
+			<div class="error">
+				{% for error in form.name.errors %}
+				<span>{{ error }}</span>
+				{% endfor %}
+			</div>
+			{% endif %}  
+            -->
+
+			{{ form.password.label }} {{ form.password }}
+			<!-- 
+            This is for custom validators
+            {% if form.password.errors %}
+			<div class="error">
+				{% for error in form.password.errors %}
+				<span>{{ error }}</span>
+				{% endfor %}
+			</div>
+			{% endif %}
+			-->
+			<br />
+			{{ form.submit }}
+		</form>
+		<div>
+			<p>You chose: {{ logged_in }}</p>
+		</div>
+	</body>
+</html>
