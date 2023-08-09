@@ -8,10 +8,12 @@
             <form method='POST' action=''>
                 <!-- The hidden tag here is necessary for CSRF protection (always include in forms) -->
                 {{ form.hidden_tag() }}
-                <!-- We display the username field label and the field itself -->
+                <!-- display the username field label and the field itself -->
                 {{ form.username.label }}
                 {{ form.username }}
-                <!-- Here, we want our page to catch and display any errors raised. The if statement checks if a ValidationError object exists and if so, present the message -->
+                <!-- catch and display any errors raised
+                    the if statement checks if a ValidationError object exists 
+                    and if so, present the message -->
                 {% if form.username.errors %}
                 <div class='error'>
                     {% for error in form.username.errors %}
