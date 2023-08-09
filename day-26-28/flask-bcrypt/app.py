@@ -36,9 +36,7 @@ def home():
     if request.form:
         person = Register(
             name=request.form.get("name"),
-            password=bcrypt.generate_password_hash(
-                request.form.get("password").decode("utf-8")
-            ),
+            password=bcrypt.generate_password_hash(request.form.get("password")),
         )
         db.session.add(person)
         db.session.commit()
