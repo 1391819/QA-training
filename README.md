@@ -36,6 +36,6 @@
   - Database Schema
   - Database Relationships
   - Database CRUD
-  - Templating 
-  - User input, forms, and form validators
+  - Templating with Jinja2
+  - WTForms and WTForms validators
   - Unit testing + Flask integration testing
