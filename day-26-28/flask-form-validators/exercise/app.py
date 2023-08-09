@@ -17,9 +17,8 @@ app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 
 # custom WTForm validator
 class UserCheck:
-    def __init__(self, banned, special_characters, message=None):
+    def __init__(self, banned, message=None):
         self.banned = banned
-        self.special_characters = special_characters
         if not message:
             message = "Please choose another username"
         self.message = message
@@ -29,8 +28,17 @@ class UserCheck:
         if field.data.lower() in (word.lower() for word in self.banned):
             raise ValidationError(self.message)
 
+
+class CharCheck:
+    def __init__(self, banned, message=None):
+        self.banned = banned
+        if not message:
+            message = "Please choose another username"
+        self.message = message
+
+    def __call__(self, form, field):
         # if entered username contaisn any of the special characters defined in self.special_characters
-        if any(char in self.special_characters for char in field.data):
+        if any(char in self.banned for char in field.data):
             self.message = "Username must not include special characters"
             raise ValidationError(self.message)
 
@@ -46,7 +54,10 @@ class myForm(FlaskForm):
             UserCheck(
                 message="That username is not allowed",
                 banned=["root", "admin", "sys"],
-                special_characters=" !\#$%&'()*+,/:;<=>?@[\]^`{|}~",
+            ),
+            CharCheck(
+                message="That username is not allowed to contain special characters",
+                banned=" !\#$%&'()*+,/:;<=>?@[\]^`{|}~",
             ),
             # in-built validator
             Length(min=2, max=15),
