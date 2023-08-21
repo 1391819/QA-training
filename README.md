@@ -39,3 +39,6 @@
   - Templating with Jinja2
   - WTForms and WTForms validators
   - Unit testing + Flask integration testing
+- day-34-35: Docker
+  - See AMS-trio-task, chaperootodo_client, multi-stage-build-exercise, AMS-duo-task repos
+  - Check [Docker Hub repos](https://hub.docker.com/repositories/1391819)
