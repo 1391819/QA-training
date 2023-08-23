@@ -42,3 +42,6 @@
 - day-34-37: Docker
   - See AMS-trio-task, chaperootodo_client, multi-stage-build-exercise, AMS-duo-task repos
   - Check [Docker Hub repos](https://hub.docker.com/repositories/1391819)
+- day-38-40: CI/CD
+  - Nexus
+  - NGINX
