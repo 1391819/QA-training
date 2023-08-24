@@ -10,13 +10,15 @@ pipeline {
 		// Dependencies stage
 		stage("Dependencies") {
 			steps {
-				sh "pip install -r requirements.txt"
+				// had to do it this way just cause of directories inside so many directories
+				// had no motivation to create a separete repo and wanted to have everything inside the training one
+				sh "pip install -r /day-38-40/jenkins-pipeline/onsaug2023/requirements.txt"
 			}
 		}
 		// Deploy stage
 		stage("Deploy") {
 			steps {
-				sh "python3 app.py"
+				sh "python3 /day-38-40/jenkins-pipeline/onsaug2023/app.py"
 			}
 		}
 	}
