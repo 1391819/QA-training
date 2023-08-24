@@ -45,4 +45,5 @@
 - day-38-40: CI/CD
   - Nexus
   - NGINX
-  - More on Jenkins (Pipeline, etc)
+  - More on Jenkins
+    - See jenkins-pipeline repo
