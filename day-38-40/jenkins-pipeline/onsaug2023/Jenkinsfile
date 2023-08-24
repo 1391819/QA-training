@@ -1,0 +1,23 @@
+pipeline {
+	agent any
+	stages {
+		// Build stage
+		stage("Build") {
+			steps {
+				sh "sudo apt install python3-pip"
+			}
+		}
+		// Dependencies stage
+		stage("Dependencies") {
+			steps {
+				sh "pip install -r requirements.txt"
+			}
+		}
+		// Deploy stage
+		stage("Deploy") {
+			steps {
+				sh "python3 app.py"
+			}
+		}
+	}
+
