@@ -47,3 +47,4 @@
   - NGINX
   - More on Jenkins
     - See jenkins-pipeline repo
+  - Ansible
