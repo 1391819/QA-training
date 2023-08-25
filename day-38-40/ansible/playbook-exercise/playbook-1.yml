@@ -7,10 +7,21 @@
         name: nginx
         state: present
         update_cache: true
+        cache_valid_time: 300
       register: nginx_install
       # once we uninstall nginx using playbook-2,
       # this value exceeds 1 so the task fails
-      #failed_when: nginx_install.cache_update_time > 3600
+      # Task 4) Make the install nginx task fail if the update cache time is bigger than 1 
+      #failed_when: nginx_install.cache_update_time > 1 # this is always going to be > 0
+      # improvement 1:
+      # we fail with general installation errors
+      failed_when: nginx_install.failed
+    
+    - name: Show information from the install nginx task
+      debug:
+        var: nginx_install
+        # add verbosity so we don't have to see output everytime
+        verbosity: 1
 
     - name: Copy nginx file over
       copy:
@@ -18,21 +29,34 @@
         dest: /etc/nginx/nginx.conf
       # store task output in variable
       register: nginx_config
-      # fail task when path before and after are the same
+      # Task 2) Fail task when path before and after are the same
       #failed_when: nginx_config.diff.after.path == nginx_config.diff.before.path
-      # run task only when this condition is met, obviously won't run unless the failed_when directive is taken out
+      # Task 3) Run task only when this condition is met, obviously won't run unless the failed_when directive is taken out
       #when: nginx_config.diff.after.path == nginx_config.diff.before.path
+
+    # Task 1) Show information from the Copy nginx filer over task
+    - name: Print contents of nginx_config
+      debug:
+        var: nginx_config
+        verbosity: 1
 
     - name: Restart nginx if needed
       service:
         name: nginx
-        state: restarted
+        #state: restarted
+        state: started # start nginx if not running or restart if already running 
+      # improvement 2: 
       when: nginx_config.changed == true
+      # or we can remove the nginx.conf when uninstalling using playbook2.yml 
+      # and keep only nginx_config.changed here
+      #when: nginx_config.changed or nginx_install.changed
 
-    - name: Show information from the Copy nginx file over task
+    - name: Check that we can connect to localhost
+      ansible.builtin.uri:
+        url: http://localhost 
+        return_content: true
+      register: webcontent
+
+    - name: Print contents of localhost request
       debug:
-        var: nginx_config
-    
-    - name: Show information from the Install nginx task
-      debug:
-        var: nginx_install
+        var: webcontent.content

@@ -1,15 +1,23 @@
-- hosts: localhost
-  connection: local
+- name: Uninstall nginx playbook
+  hosts: localhost
   become: true
   tasks:
-    - name: Stop nginx 
-      service:
+    - name: Stop nginx
+      systemd:
         name: nginx
         state: stopped
-      ignore_errors: true # we ignore errors in case nginx is not installed
 
     - name: Uninstall nginx
       apt:
         name: nginx
         state: absent # this ensures nginx is uninstalled
-      ignore_errors: true # we ignore errors in case nginx is not installed
+
+    - name: Remove config file
+      file:
+        path: /etc/nginx/nginx.conf
+        state: absent
+
+    - name: Check that we can connect to localhost (pretty much curl)
+      ansible.builtin.uri:
+        url: http://localhost
+      ignore_errors: true 
