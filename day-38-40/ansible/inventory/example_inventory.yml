@@ -3,7 +3,10 @@
     # list of hosts
 devservers:
   hosts:
+    # only this host is fedora based, all other ones are ubuntu based
+    # single machine specification
     dev1.internal.net
+      ansible_user: fedora
     dev2.internal.net
     dev3.internal.net
 testservers:
@@ -11,6 +14,9 @@ testservers:
     test1.internal.net
     test2.internal.net
     test3.internal.net
+  vars:
+    # this is the user applied to all hosts
+    ansible_user: ubuntu
 productionservers:
   hosts:
     prod1.internal.net
