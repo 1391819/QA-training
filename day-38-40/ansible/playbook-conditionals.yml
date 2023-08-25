@@ -18,4 +18,6 @@
       msg: "Below is a variable"
   - name:
     debug:
-      var: robbietaskvar
+      # var: robbietaskvar
+      # we can access specific parts of the variable
+      var: robbietaskvar[failed]
