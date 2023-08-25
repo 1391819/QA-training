@@ -8,7 +8,7 @@
   - name: Create a file
     become: True
     copy:
-      content: "Spent too long on this"
+      content: "Spent way too long on this, changed to trigger failed_when"
       dest: /etc/robbieconfig
       mode: '0644'
     # add a register variable, the output of the module will be stored in this
