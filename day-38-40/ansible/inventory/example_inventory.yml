@@ -5,8 +5,10 @@ devservers:
   hosts:
     # only this host is fedora based, all other ones are ubuntu based
     # single machine specification
-    dev1.internal.net
+    dev1.internal.net:
       ansible_user: fedora
+      # we tell the host where the public key is
+      ansible_ssh_private_key_ile;: "~/key.pem"
     dev2.internal.net
     dev3.internal.net
 testservers:
