@@ -1,0 +1,15 @@
+- hosts: localhost
+  connection: local
+  become: true
+  tasks:
+    - name: Stop nginx 
+      service:
+        name: nginx
+        state: stopped
+      ignore_errors: true # we ignore errors in case nginx is not installed
+
+    - name: Uninstall nginx
+      apt:
+        name: nginx
+        state: absent # this ensures nginx is uninstalled
+      ignore_errors: true # we ignore errors in case nginx is not installed

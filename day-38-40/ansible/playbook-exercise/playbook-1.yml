@@ -1,0 +1,38 @@
+- hosts: localhost
+  connection: local
+  become: true
+  tasks:
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: present
+        update_cache: true
+      register: nginx_install
+      # once we uninstall nginx using playbook-2,
+      # this value exceeds 1 so the task fails
+      #failed_when: nginx_install.cache_update_time > 3600
+
+    - name: Copy nginx file over
+      copy:
+        src: nginx.conf
+        dest: /etc/nginx/nginx.conf
+      # store task output in variable
+      register: nginx_config
+      # fail task when path before and after are the same
+      #failed_when: nginx_config.diff.after.path == nginx_config.diff.before.path
+      # run task only when this condition is met, obviously won't run unless the failed_when directive is taken out
+      #when: nginx_config.diff.after.path == nginx_config.diff.before.path
+
+    - name: Restart nginx if needed
+      service:
+        name: nginx
+        state: restarted
+      when: nginx_config.changed == true
+
+    - name: Show information from the Copy nginx file over task
+      debug:
+        var: nginx_config
+    
+    - name: Show information from the Install nginx task
+      debug:
+        var: nginx_install
