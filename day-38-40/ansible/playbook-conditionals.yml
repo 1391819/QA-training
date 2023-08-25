@@ -1,4 +1,7 @@
 - hosts: localhost
   tasks:
+  # this will fail the second time the playbook is run since it can't create a folder which already exists
   - name: Set up a task that will fail
     ansible.builtin.command: "mkdir /home/ubuntu/failfolder"
+    # we can set up a way of ignoring errors
+    ignore_errors: True
