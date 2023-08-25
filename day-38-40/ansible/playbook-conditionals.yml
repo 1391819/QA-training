@@ -13,11 +13,15 @@
       mode: '0644'
     # add a register variable, the output of the module will be stored in this
     register: robbietaskvar
+    # adding a conditional of when to fail the task
+    failed_when: robbietaskvar.checksum != "e78e38bad2bf992c461a9c1390dcd885872185fb"
+  - name: Print the whole var
+    debug:
+      var: robbietaskvar
   - name: Print a message
     debug:
       msg: "Below is a variable"
-  - name:
+  - name: Print specific parts of the var
     debug:
-      # var: robbietaskvar
-      # we can access specific parts of the variable like a dictionary
+      # we can access specific parts of the variable like a dictionay
       var: robbietaskvar.failed
