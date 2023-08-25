@@ -1,18 +1,31 @@
 # example with group names
-	# hosts
-		# list of hosts
+  # hosts
+    # list of hosts
 devservers:
-	hosts:
-		dev1.internal.net
-		dev2.internal.net
-		dev3.internal.net
+  hosts:
+    dev1.internal.net
+    dev2.internal.net
+    dev3.internal.net
 testservers:
-	hosts:
-		test1.internal.net
-		test2.internal.net
-		test3.internal.net
+  hosts:
+    test1.internal.net
+    test2.internal.net
+    test3.internal.net
 productionservers:
-	hosts:
-		prod1.internal.net
-		prod2.internal.net
-		prod3.internal.net		
+  hosts:
+    prod1.internal.net
+    prod2.internal.net
+    prod3.internal.net
+east-dc:
+  hosts:
+    dev1.internal.net
+    dev2.internal.net
+    test1.internal.net
+    prod1.internal.net
+west-dc:
+  hosts:
+    dev3.internal.net
+    test2.internal.net
+    test3.internal.net
+    prod2.internal.net
+    prod3.internal.net
