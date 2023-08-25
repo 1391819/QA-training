@@ -1,0 +1,22 @@
+- hosts: #hosts group name
+  become: true
+  tasks:
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: Copy nginx file over
+      copy:
+        src: nginx.conf
+        dest: /etc/nginx/nginx.conf
+
+    - name: Check that we can connect (GET)
+      ansible.builtin.uri:
+        url: http://localhost
+        return_content: true
+      register: webcontent
+
+    - name: Print contents of request
+      debug:
+        var: webcontent.content
