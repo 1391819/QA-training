@@ -9,7 +9,6 @@
     become: True
     file: 
       path: /etc/robbieconfig
-      state: file
       mode: 644
     # add a register variable, the output of the module will be stored in this
     register: robbietaskvar
