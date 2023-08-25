@@ -7,9 +7,10 @@
     ignore_errors: True
   - name: Create a file
     become: True
-    file: 
-      path: /etc/robbieconfig
-      mode: 644
+    copy:
+      content: "Spent too long on this"
+      dest: /etc/robbieconfig
+      mode: '0644'
     # add a register variable, the output of the module will be stored in this
     register: robbietaskvar
   - name: Print a message
