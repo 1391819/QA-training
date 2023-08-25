@@ -20,4 +20,4 @@
     debug:
       # var: robbietaskvar
       # we can access specific parts of the variable
-      var: robbietaskvar[failed]
+      var: robbietaskvar.failed
