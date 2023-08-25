@@ -5,3 +5,17 @@
     ansible.builtin.command: "mkdir /home/ubuntu/failfolder"
     # we can set up a way of ignoring errors
     ignore_errors: True
+  - name: Create a file
+    become: True
+    file: 
+      path: /etc/robbieconfig
+      state: present
+      mode: 644
+    # add a register variable, the output of the module will be stored in this
+    register: robbietaskvar
+  - name: Print a message
+    debug:
+      msg: "Below is a variable"
+  - name:
+    debug:
+      var: robbietaskvar
