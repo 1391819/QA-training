@@ -19,5 +19,5 @@
   - name:
     debug:
       # var: robbietaskvar
-      # we can access specific parts of the variable
+      # we can access specific parts of the variable like a dictionary
       var: robbietaskvar.failed
