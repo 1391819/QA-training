@@ -1,0 +1,11 @@
+- name: Print message for Ubuntu
+  hosts: all
+  tasks:
+    - name: Check OS facts
+      ansible.builtin.setup:
+      register: os_facts
+    - name: Print message if OS is Ubuntu
+      ansible.builtin.debug:
+        msg: "This is an Ubuntu OS"
+      when:
+        "'Ubuntu' in os_facts.ansible_facts['ansible_distribution']"
