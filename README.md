@@ -48,3 +48,6 @@
   - More on Jenkins
     - See jenkins-pipeline repo
   - Ansible
+- day-41-42: CI/CD
+  - More on Ansible
+  - Terraform
