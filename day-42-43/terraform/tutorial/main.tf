@@ -10,15 +10,13 @@ terraform {
 
 # configure AWS provider
 provider "aws" {
-  region                  = "eu-west-2"
-  shared_credentials_file = "~/.aws/credentials"
+  region                  = "eu-west-2"          # region
+  shared_credentials_file = "~/.aws/credentials" # credentials
 }
 
 # create a new resource
 resource "aws_instance" "EC2" {
-  # declaring what Amazon Machine Image to use for the OS
-  ami = var.ami-id
-  # this will determine how many virtual CPUs and how much memory it will have
-  instance_type = var.instance-type
-  # key_name = var.pem-key # this is for ssh? would require a public key defined in the provider
+  ami           = var.ami-id        # declaring what Amazon Machine Image to use for the OS
+  instance_type = var.instance-type # this will determine how many virtual CPUs and how much memory it will have
+  # key_name = var.pem-key          # this is for ssh? would require a public key defined in the provider
 }
